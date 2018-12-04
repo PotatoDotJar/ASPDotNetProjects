@@ -1,0 +1,69 @@
+ 2018-12-04 18:11:41,632 [P1700/D5/T6] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Terminating
+ 2018-12-04 18:11:41,633 [P1700/D5/T6] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Waiting for tasks to complete
+ 2018-12-04 18:11:41,635 [P1700/D5/T6] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [HealthCheckNotifier] Terminating
+ 2018-12-04 18:11:41,635 [P1700/D5/T6] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [HealthCheckNotifier] Waiting for tasks to complete
+ 2018-12-04 18:11:41,636 [P1700/D5/T6] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [HealthCheckNotifier] Tasks completed, terminated
+ 2018-12-04 18:11:41,638 [P1700/D5/T52] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Tasks completed, terminated
+ 2018-12-04 18:11:41,641 [P1700/D5/T6] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Terminating
+ 2018-12-04 18:11:41,642 [P1700/D5/T6] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Waiting for tasks to complete
+ 2018-12-04 18:11:41,642 [P1700/D5/T55] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Tasks completed, terminated
+ 2018-12-04 18:11:41,646 [P1700/D5/T6] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Terminating
+ 2018-12-04 18:11:41,646 [P1700/D5/T6] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Waiting for tasks to complete
+ 2018-12-04 18:11:41,647 [P1700/D5/T62] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Tasks completed, terminated
+ 2018-12-04 18:11:41,647 [P1700/D5/T6] INFO  Umbraco.Core.MainDom - Stopping...
+ 2018-12-04 18:11:41,650 [P1700/D5/T6] INFO  Umbraco.Web.ExamineStartup - Examine shutting down
+ 2018-12-04 18:11:41,655 [P1700/D5/T6] INFO  Umbraco.Web.ExamineStartup - Complete (took 5ms)
+ 2018-12-04 18:11:41,656 [P1700/D5/T6] INFO  Umbraco.Core.MainDom - Released MainDom.
+ 2018-12-04 18:11:41,656 [P1700/D5/T6] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Terminating
+ 2018-12-04 18:11:41,656 [P1700/D5/T6] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Waiting for tasks to complete
+ 2018-12-04 18:11:41,656 [P1700/D5/T6] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Terminating
+ 2018-12-04 18:11:41,656 [P1700/D5/T8] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Tasks completed, terminated
+ 2018-12-04 18:11:41,657 [P1700/D5/T6] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Waiting for tasks to complete
+ 2018-12-04 18:11:41,657 [P1700/D5/T6] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [InstructionProcessing] Terminating
+ 2018-12-04 18:11:41,657 [P1700/D5/T9] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Tasks completed, terminated
+ 2018-12-04 18:11:41,657 [P1700/D5/T6] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [InstructionProcessing] Waiting for tasks to complete
+ 2018-12-04 18:11:41,658 [P1700/D5/T54] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [InstructionProcessing] Tasks completed, terminated
+ 2018-12-04 18:12:11,680 [P1700/D5/T6] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Details: BrowsersDirChangeOrDirectoryRename
+
+_shutDownMessage=Change Notification for critical directories.
+App_Browsers dir change or directory rename
+HostingEnvironment initiated shutdown
+Change Notification for critical directories.
+App_Browsers dir change or directory rename
+Directory rename change notification for 'C:\Users\RJ\gitPersonal\ASPDotNetProjects\GettingStartedWithUnbraco\GettingStartedWithUnbraco'.
+GettingStartedWithUnbraco dir change or directory rename
+CONFIG change
+CONFIG change
+CONFIG change
+CONFIG change
+CONFIG change
+CONFIG change
+CONFIG change
+CONFIG change
+CONFIG change
+CONFIG change
+CONFIG change
+CONFIG change
+CONFIG change
+Change in GLOBAL.ASAX
+CONFIG change
+Change in C:\Users\RJ\AppData\Local\Temp\Temporary ASP.NET Files\vs\d852ac72\7ddaf031\hash\hash.web
+Change in C:\Users\RJ\AppData\Local\Temp\Temporary ASP.NET Files\vs\d852ac72\7ddaf031\hash\hash.web
+HostingEnvironment caused shutdown
+
+_shutDownStack=   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   at System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   at System.Web.HttpRuntime.ShutdownAppDomain(String stackTrace)
+   at System.Web.HttpRuntime.OnCriticalDirectoryChange(Object sender, FileChangeEvent e)
+   at System.Web.FileChangesMonitor.OnCriticaldirChange(Object sender, FileChangeEvent e)
+   at System.Web.DirectoryMonitor.FireNotifications()
+   at System.Web.Util.WorkItem.CallCallbackWithAssert(WorkItemCallback callback)
+   at System.Web.Util.WorkItem.OnQueueUserWorkItemCompletion(Object state)
+   at System.Threading.QueueUserWorkItemCallback.WaitCallback_Context(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
