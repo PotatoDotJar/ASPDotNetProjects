@@ -1,0 +1,24 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.HomePage>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = null;
+}
+<html lang="en">
+    <head>
+        <title>My Umbraco Test Site</title>
+        
+        
+        @{
+            var currentMonth = DateTime.Now.Month;
+        
+        }
+        
+        
+    </head>
+    
+    <body>
+        <div style="text-align: center;"><h2>@currentMonth</h2></div>
+        <div>@Umbraco.Field("bodyText", altText:"Nothing here!")</div>
+    </body>
+    
+</html>
