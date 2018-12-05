@@ -1,0 +1,33 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = null;
+
+
+	var RobotsString = "";
+
+	foreach(var tags in @Umbraco.Field("metaRobots").ToHtmlString().Split(','))
+	{
+		RobotsString += tags + ", "
+	}
+
+}
+
+<html>
+	<head>
+		<title>This is the master title</title>
+		
+		<meta name="title" content="">
+		<meta name="description" content="@Umbraco.Field("metaDescription")">
+		<meta name="robots" content="@RobotsString">
+		<meta name="keywords" content="@Umbraco.Field("metaKeywords").ToHtmlString()">
+		
+	</head>
+	<body>
+		@Html.Partial("_Header")
+		@RenderBody()
+		
+		
+	</body>
+	
+	
+</html>

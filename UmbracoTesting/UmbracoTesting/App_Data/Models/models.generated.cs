@@ -19,14 +19,14 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "921e1e6bd007dfe1")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "c3ec9b8a262efcb1")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.4")]
 
 namespace Umbraco.Web.PublishedContentModels
 {
 	/// <summary>Home Page</summary>
 	[PublishedContentModel("homePage")]
-	public partial class HomePage : PublishedContentModel
+	public partial class HomePage : PublishedContentModel, ISEO
 	{
 #pragma warning disable 0109 // new is redundant
 		public new const string ModelTypeAlias = "homePage";
@@ -66,6 +66,168 @@ namespace Umbraco.Web.PublishedContentModels
 		{
 			get { return this.GetPropertyValue<IHtmlString>("test"); }
 		}
+
+		///<summary>
+		/// Meta Description
+		///</summary>
+		[ImplementPropertyType("metaDescription")]
+		public string MetaDescription
+		{
+			get { return Umbraco.Web.PublishedContentModels.SEO.GetMetaDescription(this); }
+		}
+
+		///<summary>
+		/// Meta Keywords
+		///</summary>
+		[ImplementPropertyType("metaKeywords")]
+		public IEnumerable<string> MetaKeywords
+		{
+			get { return Umbraco.Web.PublishedContentModels.SEO.GetMetaKeywords(this); }
+		}
+
+		///<summary>
+		/// Meta Robots
+		///</summary>
+		[ImplementPropertyType("metaRobots")]
+		public IEnumerable<string> MetaRobots
+		{
+			get { return Umbraco.Web.PublishedContentModels.SEO.GetMetaRobots(this); }
+		}
+
+		///<summary>
+		/// Meta Title
+		///</summary>
+		[ImplementPropertyType("metaTitle")]
+		public string MetaTitle
+		{
+			get { return Umbraco.Web.PublishedContentModels.SEO.GetMetaTitle(this); }
+		}
+	}
+
+	/// <summary>TextPage</summary>
+	[PublishedContentModel("textPage")]
+	public partial class TextPage : PublishedContentModel
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "textPage";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public TextPage(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<TextPage, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// pageContent
+		///</summary>
+		[ImplementPropertyType("pageContent")]
+		public IHtmlString PageContent
+		{
+			get { return this.GetPropertyValue<IHtmlString>("pageContent"); }
+		}
+	}
+
+	// Mixin content Type 1059 with alias "sEO"
+	/// <summary>SEO</summary>
+	public partial interface ISEO : IPublishedContent
+	{
+		/// <summary>Meta Description</summary>
+		string MetaDescription { get; }
+
+		/// <summary>Meta Keywords</summary>
+		IEnumerable<string> MetaKeywords { get; }
+
+		/// <summary>Meta Robots</summary>
+		IEnumerable<string> MetaRobots { get; }
+
+		/// <summary>Meta Title</summary>
+		string MetaTitle { get; }
+	}
+
+	/// <summary>SEO</summary>
+	[PublishedContentModel("sEO")]
+	public partial class SEO : PublishedContentModel, ISEO
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "sEO";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public SEO(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<SEO, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Meta Description
+		///</summary>
+		[ImplementPropertyType("metaDescription")]
+		public string MetaDescription
+		{
+			get { return GetMetaDescription(this); }
+		}
+
+		/// <summary>Static getter for Meta Description</summary>
+		public static string GetMetaDescription(ISEO that) { return that.GetPropertyValue<string>("metaDescription"); }
+
+		///<summary>
+		/// Meta Keywords
+		///</summary>
+		[ImplementPropertyType("metaKeywords")]
+		public IEnumerable<string> MetaKeywords
+		{
+			get { return GetMetaKeywords(this); }
+		}
+
+		/// <summary>Static getter for Meta Keywords</summary>
+		public static IEnumerable<string> GetMetaKeywords(ISEO that) { return that.GetPropertyValue<IEnumerable<string>>("metaKeywords"); }
+
+		///<summary>
+		/// Meta Robots
+		///</summary>
+		[ImplementPropertyType("metaRobots")]
+		public IEnumerable<string> MetaRobots
+		{
+			get { return GetMetaRobots(this); }
+		}
+
+		/// <summary>Static getter for Meta Robots</summary>
+		public static IEnumerable<string> GetMetaRobots(ISEO that) { return that.GetPropertyValue<IEnumerable<string>>("metaRobots"); }
+
+		///<summary>
+		/// Meta Title
+		///</summary>
+		[ImplementPropertyType("metaTitle")]
+		public string MetaTitle
+		{
+			get { return GetMetaTitle(this); }
+		}
+
+		/// <summary>Static getter for Meta Title</summary>
+		public static string GetMetaTitle(ISEO that) { return that.GetPropertyValue<string>("metaTitle"); }
 	}
 
 	/// <summary>Folder</summary>

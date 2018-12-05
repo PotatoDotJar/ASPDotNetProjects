@@ -1,19 +1,17 @@
-﻿
-SET NUMERIC_ROUNDABORT OFF
+﻿SET NUMERIC_ROUNDABORT OFF
 SET ANSI_PADDING, ANSI_WARNINGS, CONCAT_NULL_YIELDS_NULL, ARITHABORT, QUOTED_IDENTIFIER, ANSI_NULLS, NOCOUNT ON
 SET DATEFORMAT YMD
 SET XACT_ABORT ON
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
 GO -- SQRIBE/GO;6def4e
 
-IF @@ERROR <> 0 SET NOEXEC ON
-BEGIN TRANSACTION
-
 -- SQRIBE/TABLE;6def4e
-PRINT N'Add 23 rows to dbo.umbracoLog...'
-GO -- SQRIBE/GO;6def4e
+-- Adding 71 rows to dbo.umbracoLog
 
 SET IDENTITY_INSERT [dbo].[umbracoLog] ON
+
+BEGIN TRANSACTION
+
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (1,0,0,CONVERT(datetime,'2018-12-04 20:31:03.030',121),N'Save',N'Save Template performed by user');
 -- SQRIBE/INSERT;6def4e
@@ -60,21 +58,104 @@ INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[
 INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (22,0,1051,CONVERT(datetime,'2018-12-04 22:44:07.307',121),N'Save',N'Save Template performed by user');
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (23,0,1051,CONVERT(datetime,'2018-12-04 22:45:26.957',121),N'Save',N'Save Template performed by user');
-
-IF @@ERROR <> 0 SET NOEXEC ON
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (24,0,-1,CONVERT(datetime,'2018-12-05 13:06:20.377',121),N'Save',N'Save PartialView performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (25,0,1051,CONVERT(datetime,'2018-12-05 13:06:33.430',121),N'Save',N'Save Template performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (26,0,-1,CONVERT(datetime,'2018-12-05 13:07:35.880',121),N'Save',N'Save Macro performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (27,0,-1,CONVERT(datetime,'2018-12-05 13:07:44.560',121),N'Delete',N'Delete Macro performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (28,0,0,CONVERT(datetime,'2018-12-05 13:10:43.467',121),N'Save',N'Save Template performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (29,0,1055,CONVERT(datetime,'2018-12-05 13:10:43.513',121),N'Save',N'Save ContentType performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (30,0,0,CONVERT(datetime,'2018-12-05 13:11:07.303',121),N'Save',N'Save Template performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (31,0,1056,CONVERT(datetime,'2018-12-05 13:12:58.290',121),N'Save',N'Save Template performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (32,0,1051,CONVERT(datetime,'2018-12-05 13:13:09.967',121),N'Save',N'Save Template performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (33,0,1054,CONVERT(datetime,'2018-12-05 13:13:19.780',121),N'Save',N'Save Template performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (34,0,1057,CONVERT(datetime,'2018-12-05 13:13:49.977',121),N'Save',N'Save ContentType performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (35,0,1057,CONVERT(datetime,'2018-12-05 13:13:56.230',121),N'Save',N'Save ContentType performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (36,0,1057,CONVERT(datetime,'2018-12-05 13:19:25.490',121),N'Save',N'Save ContentType performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (37,0,1059,CONVERT(datetime,'2018-12-05 13:20:42.107',121),N'Save',N'Save ContentType performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (38,0,1052,CONVERT(datetime,'2018-12-05 13:22:23.317',121),N'Save',N'Save ContentType performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (39,0,1057,CONVERT(datetime,'2018-12-05 13:22:41.543',121),N'Save',N'Save ContentType performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (40,0,1056,CONVERT(datetime,'2018-12-05 13:26:47.407',121),N'Save',N'Save Template performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (41,0,1059,CONVERT(datetime,'2018-12-05 13:27:08.330',121),N'Save',N'Save ContentType performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (42,0,1056,CONVERT(datetime,'2018-12-05 13:28:40.447',121),N'Save',N'Save Template performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (43,0,1056,CONVERT(datetime,'2018-12-05 13:28:45.727',121),N'Save',N'Save Template performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (44,0,1056,CONVERT(datetime,'2018-12-05 13:29:02.703',121),N'Save',N'Save Template performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (45,0,-1,CONVERT(datetime,'2018-12-05 13:29:20.963',121),N'Save',N'Save PartialView performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (46,0,-1,CONVERT(datetime,'2018-12-05 13:29:24.487',121),N'Delete',N'Delete PartialView performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (47,0,1051,CONVERT(datetime,'2018-12-05 13:29:35.407',121),N'Save',N'Save Template performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (48,0,1056,CONVERT(datetime,'2018-12-05 13:29:45.170',121),N'Save',N'Save Template performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (49,0,1053,CONVERT(datetime,'2018-12-05 13:30:18.220',121),N'Publish',N'Save and Publish performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (50,0,1057,CONVERT(datetime,'2018-12-05 13:31:12.873',121),N'Save',N'Save ContentType performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (51,0,1057,CONVERT(datetime,'2018-12-05 13:31:28.153',121),N'Save',N'Save ContentType performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (52,0,1053,CONVERT(datetime,'2018-12-05 13:32:17.967',121),N'UnPublish',N'UnPublish performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (53,0,1053,CONVERT(datetime,'2018-12-05 13:32:17.990',121),N'Move',N'Move Content to Recycle Bin performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (54,0,1053,CONVERT(datetime,'2018-12-05 13:32:18.020',121),N'Delete',N'Trashed content with Id: 1053 related to original parent content with Id: -1');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (55,0,0,CONVERT(datetime,'2018-12-05 13:32:26.567',121),N'Publish',N'Save and Publish performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (56,0,1060,CONVERT(datetime,'2018-12-05 13:33:20.650',121),N'Publish',N'Save and Publish performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (57,0,1060,CONVERT(datetime,'2018-12-05 13:33:45.297',121),N'Publish',N'Save and Publish performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (58,0,1060,CONVERT(datetime,'2018-12-05 13:36:25.507',121),N'UnPublish',N'UnPublish performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (59,0,1060,CONVERT(datetime,'2018-12-05 13:36:25.557',121),N'Delete',N'Delete Content performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (60,0,-1,CONVERT(datetime,'2018-12-05 13:36:25.557',121),N'Delete',N'Delete Content of Types 1057 performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (61,0,1057,CONVERT(datetime,'2018-12-05 13:36:25.603',121),N'Delete',N'Delete ContentType performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (62,0,1056,CONVERT(datetime,'2018-12-05 13:36:44.790',121),N'Save',N'Save Template performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (63,0,0,CONVERT(datetime,'2018-12-05 13:37:16.357',121),N'Save',N'Save Content performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (64,0,1061,CONVERT(datetime,'2018-12-05 13:37:31.557',121),N'Publish',N'Save and Publish performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (65,0,1061,CONVERT(datetime,'2018-12-05 13:37:53.627',121),N'Publish',N'Save and Publish performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (66,0,1052,CONVERT(datetime,'2018-12-05 13:38:13.930',121),N'Save',N'Save ContentType performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (67,0,1059,CONVERT(datetime,'2018-12-05 13:38:32.123',121),N'Save',N'Save ContentType performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (68,0,1061,CONVERT(datetime,'2018-12-05 13:39:10.040',121),N'Publish',N'Save and Publish performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (69,0,1056,CONVERT(datetime,'2018-12-05 13:41:02.627',121),N'Save',N'Save Template performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (70,0,1056,CONVERT(datetime,'2018-12-05 13:41:18.807',121),N'Save',N'Save Template performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (71,0,1061,CONVERT(datetime,'2018-12-05 13:41:29.037',121),N'Publish',N'Save and Publish performed by user');
 
 COMMIT TRANSACTION
 
-IF @@ERROR <> 0 SET NOEXEC ON
-
-DECLARE @Success AS BIT
-SET @Success = 1
-SET NOEXEC OFF
-
-IF (@Success = 1) PRINT 'Restore table data dbo.umbracoLog succeeded'
-ELSE BEGIN
-    IF @@TRANCOUNT > 0 ROLLBACK TRANSACTION
-    PRINT 'Restore table data dbo.umbracoLog failed'
-END
-
 SET IDENTITY_INSERT [dbo].[umbracoLog] OFF
+

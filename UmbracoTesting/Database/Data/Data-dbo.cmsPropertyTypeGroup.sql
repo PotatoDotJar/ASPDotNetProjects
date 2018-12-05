@@ -1,19 +1,17 @@
-﻿
-SET NUMERIC_ROUNDABORT OFF
+﻿SET NUMERIC_ROUNDABORT OFF
 SET ANSI_PADDING, ANSI_WARNINGS, CONCAT_NULL_YIELDS_NULL, ARITHABORT, QUOTED_IDENTIFIER, ANSI_NULLS, NOCOUNT ON
 SET DATEFORMAT YMD
 SET XACT_ABORT ON
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
 GO -- SQRIBE/GO;6def4e
 
-IF @@ERROR <> 0 SET NOEXEC ON
-BEGIN TRANSACTION
-
 -- SQRIBE/TABLE;6def4e
-PRINT N'Add 5 rows to dbo.cmsPropertyTypeGroup...'
-GO -- SQRIBE/GO;6def4e
+-- Adding 7 rows to dbo.cmsPropertyTypeGroup
 
 SET IDENTITY_INSERT [dbo].[cmsPropertyTypeGroup] ON
+
+BEGIN TRANSACTION
+
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[cmsPropertyTypeGroup] ([id],[contenttypeNodeId],[text],[sortorder],[uniqueID]) VALUES (3,1032,N'Image',1,'79ED4D07-254A-42CF-8FA9-EBE1C116A596');
 -- SQRIBE/INSERT;6def4e
@@ -24,21 +22,12 @@ INSERT INTO [dbo].[cmsPropertyTypeGroup] ([id],[contenttypeNodeId],[text],[sorto
 INSERT INTO [dbo].[cmsPropertyTypeGroup] ([id],[contenttypeNodeId],[text],[sortorder],[uniqueID]) VALUES (11,1044,N'Membership',1,'0756729D-D665-46E3-B84A-37ACEAA614F8');
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[cmsPropertyTypeGroup] ([id],[contenttypeNodeId],[text],[sortorder],[uniqueID]) VALUES (12,1052,N'Content',0,'83C76E95-DF4F-4A4E-87CE-5A82A7273BF9');
-
-IF @@ERROR <> 0 SET NOEXEC ON
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsPropertyTypeGroup] ([id],[contenttypeNodeId],[text],[sortorder],[uniqueID]) VALUES (13,1055,N'Content',0,'E0990A4F-7F4D-468D-8427-6AD1A69B40E0');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsPropertyTypeGroup] ([id],[contenttypeNodeId],[text],[sortorder],[uniqueID]) VALUES (15,1059,N'SEO',5,'4540FD17-1543-4F0D-B729-34288D414DD3');
 
 COMMIT TRANSACTION
 
-IF @@ERROR <> 0 SET NOEXEC ON
-
-DECLARE @Success AS BIT
-SET @Success = 1
-SET NOEXEC OFF
-
-IF (@Success = 1) PRINT 'Restore table data dbo.cmsPropertyTypeGroup succeeded'
-ELSE BEGIN
-    IF @@TRANCOUNT > 0 ROLLBACK TRANSACTION
-    PRINT 'Restore table data dbo.cmsPropertyTypeGroup failed'
-END
-
 SET IDENTITY_INSERT [dbo].[cmsPropertyTypeGroup] OFF
+

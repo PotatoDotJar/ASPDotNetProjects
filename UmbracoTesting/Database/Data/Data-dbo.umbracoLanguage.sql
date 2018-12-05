@@ -1,36 +1,21 @@
-﻿
-SET NUMERIC_ROUNDABORT OFF
+﻿SET NUMERIC_ROUNDABORT OFF
 SET ANSI_PADDING, ANSI_WARNINGS, CONCAT_NULL_YIELDS_NULL, ARITHABORT, QUOTED_IDENTIFIER, ANSI_NULLS, NOCOUNT ON
 SET DATEFORMAT YMD
 SET XACT_ABORT ON
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
 GO -- SQRIBE/GO;6def4e
 
-IF @@ERROR <> 0 SET NOEXEC ON
-BEGIN TRANSACTION
-
 -- SQRIBE/TABLE;6def4e
-PRINT N'Add 1 row to dbo.umbracoLanguage...'
-GO -- SQRIBE/GO;6def4e
+-- Adding 1 row to dbo.umbracoLanguage
 
 SET IDENTITY_INSERT [dbo].[umbracoLanguage] ON
+
+BEGIN TRANSACTION
+
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[umbracoLanguage] ([id],[languageISOCode],[languageCultureName]) VALUES (1,N'en-US',N'en-US');
 
-IF @@ERROR <> 0 SET NOEXEC ON
-
 COMMIT TRANSACTION
 
-IF @@ERROR <> 0 SET NOEXEC ON
-
-DECLARE @Success AS BIT
-SET @Success = 1
-SET NOEXEC OFF
-
-IF (@Success = 1) PRINT 'Restore table data dbo.umbracoLanguage succeeded'
-ELSE BEGIN
-    IF @@TRANCOUNT > 0 ROLLBACK TRANSACTION
-    PRINT 'Restore table data dbo.umbracoLanguage failed'
-END
-
 SET IDENTITY_INSERT [dbo].[umbracoLanguage] OFF
+

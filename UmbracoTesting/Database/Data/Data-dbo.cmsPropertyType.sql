@@ -1,19 +1,17 @@
-﻿
-SET NUMERIC_ROUNDABORT OFF
+﻿SET NUMERIC_ROUNDABORT OFF
 SET ANSI_PADDING, ANSI_WARNINGS, CONCAT_NULL_YIELDS_NULL, ARITHABORT, QUOTED_IDENTIFIER, ANSI_NULLS, NOCOUNT ON
 SET DATEFORMAT YMD
 SET XACT_ABORT ON
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
 GO -- SQRIBE/GO;6def4e
 
-IF @@ERROR <> 0 SET NOEXEC ON
-BEGIN TRANSACTION
-
 -- SQRIBE/TABLE;6def4e
-PRINT N'Add 20 rows to dbo.cmsPropertyType...'
-GO -- SQRIBE/GO;6def4e
+-- Adding 25 rows to dbo.cmsPropertyType
 
 SET IDENTITY_INSERT [dbo].[cmsPropertyType] ON
+
+BEGIN TRANSACTION
+
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[cmsPropertyType] ([id],[dataTypeId],[contentTypeId],[propertyTypeGroupId],[Alias],[Name],[sortOrder],[mandatory],[validationRegExp],[Description],[UniqueID]) VALUES (6,1043,1032,3,N'umbracoFile',N'Upload image',0,0,NULL,NULL,'00000006-0000-0000-0000-000000000000');
 -- SQRIBE/INSERT;6def4e
@@ -54,21 +52,18 @@ INSERT INTO [dbo].[cmsPropertyType] ([id],[dataTypeId],[contentTypeId],[property
 INSERT INTO [dbo].[cmsPropertyType] ([id],[dataTypeId],[contentTypeId],[propertyTypeGroupId],[Alias],[Name],[sortOrder],[mandatory],[validationRegExp],[Description],[UniqueID]) VALUES (37,-87,1052,12,N'bodyText',N'Body Text',0,1,NULL,N'Text for the body of the page.','50647017-2AB9-49AE-8317-CD9CA09CE426');
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[cmsPropertyType] ([id],[dataTypeId],[contentTypeId],[propertyTypeGroupId],[Alias],[Name],[sortOrder],[mandatory],[validationRegExp],[Description],[UniqueID]) VALUES (38,-87,1052,12,N'test',N'Test',1,0,NULL,NULL,'94299334-7AE2-401D-BBC7-D14C4285BC43');
-
-IF @@ERROR <> 0 SET NOEXEC ON
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsPropertyType] ([id],[dataTypeId],[contentTypeId],[propertyTypeGroupId],[Alias],[Name],[sortOrder],[mandatory],[validationRegExp],[Description],[UniqueID]) VALUES (39,-87,1055,13,N'pageContent',N'pageContent',0,1,NULL,NULL,'77E8B438-2A3D-4AE9-BF7F-572A3A1F8402');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsPropertyType] ([id],[dataTypeId],[contentTypeId],[propertyTypeGroupId],[Alias],[Name],[sortOrder],[mandatory],[validationRegExp],[Description],[UniqueID]) VALUES (43,-88,1059,15,N'metaTitle',N'Meta Title',0,0,NULL,N'','41DA5423-B6D5-4148-B0D8-0B1B635E0F36');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsPropertyType] ([id],[dataTypeId],[contentTypeId],[propertyTypeGroupId],[Alias],[Name],[sortOrder],[mandatory],[validationRegExp],[Description],[UniqueID]) VALUES (44,-89,1059,15,N'metaDescription',N'Meta Description',1,0,NULL,NULL,'71444643-F677-4460-AA46-BFF150250978');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsPropertyType] ([id],[dataTypeId],[contentTypeId],[propertyTypeGroupId],[Alias],[Name],[sortOrder],[mandatory],[validationRegExp],[Description],[UniqueID]) VALUES (45,1041,1059,15,N'metaKeywords',N'Meta Keywords',2,0,NULL,NULL,'B82B6A3F-31E6-43E5-B4DC-5B784FB65422');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsPropertyType] ([id],[dataTypeId],[contentTypeId],[propertyTypeGroupId],[Alias],[Name],[sortOrder],[mandatory],[validationRegExp],[Description],[UniqueID]) VALUES (46,1041,1059,15,N'metaRobots',N'Meta Robots',3,0,NULL,NULL,'9A594926-77B2-4CD5-91ED-1D26FF1AAE95');
 
 COMMIT TRANSACTION
 
-IF @@ERROR <> 0 SET NOEXEC ON
-
-DECLARE @Success AS BIT
-SET @Success = 1
-SET NOEXEC OFF
-
-IF (@Success = 1) PRINT 'Restore table data dbo.cmsPropertyType succeeded'
-ELSE BEGIN
-    IF @@TRANCOUNT > 0 ROLLBACK TRANSACTION
-    PRINT 'Restore table data dbo.cmsPropertyType failed'
-END
-
 SET IDENTITY_INSERT [dbo].[cmsPropertyType] OFF
+

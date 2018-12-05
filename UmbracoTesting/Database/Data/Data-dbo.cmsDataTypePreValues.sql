@@ -1,19 +1,17 @@
-﻿
-SET NUMERIC_ROUNDABORT OFF
+﻿SET NUMERIC_ROUNDABORT OFF
 SET ANSI_PADDING, ANSI_WARNINGS, CONCAT_NULL_YIELDS_NULL, ARITHABORT, QUOTED_IDENTIFIER, ANSI_NULLS, NOCOUNT ON
 SET DATEFORMAT YMD
 SET XACT_ABORT ON
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
 GO -- SQRIBE/GO;6def4e
 
-IF @@ERROR <> 0 SET NOEXEC ON
-BEGIN TRANSACTION
-
 -- SQRIBE/TABLE;6def4e
-PRINT N'Add 13 rows to dbo.cmsDataTypePreValues...'
-GO -- SQRIBE/GO;6def4e
+-- Adding 13 rows to dbo.cmsDataTypePreValues
 
 SET IDENTITY_INSERT [dbo].[cmsDataTypePreValues] ON
+
+BEGIN TRANSACTION
+
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[cmsDataTypePreValues] ([id],[datatypeNodeId],[value],[sortorder],[alias]) VALUES (-9,-96,N'[{"alias":"updateDate","header":"Last edited","isSystem":1},{"alias":"owner","header":"Updated by","isSystem":1}]',5,N'includeProperties');
 -- SQRIBE/INSERT;6def4e
@@ -41,20 +39,7 @@ INSERT INTO [dbo].[cmsDataTypePreValues] ([id],[datatypeNodeId],[value],[sortord
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[cmsDataTypePreValues] ([id],[datatypeNodeId],[value],[sortorder],[alias]) VALUES (6,1049,N'1',0,N'multiPicker');
 
-IF @@ERROR <> 0 SET NOEXEC ON
-
 COMMIT TRANSACTION
 
-IF @@ERROR <> 0 SET NOEXEC ON
-
-DECLARE @Success AS BIT
-SET @Success = 1
-SET NOEXEC OFF
-
-IF (@Success = 1) PRINT 'Restore table data dbo.cmsDataTypePreValues succeeded'
-ELSE BEGIN
-    IF @@TRANCOUNT > 0 ROLLBACK TRANSACTION
-    PRINT 'Restore table data dbo.cmsDataTypePreValues failed'
-END
-
 SET IDENTITY_INSERT [dbo].[cmsDataTypePreValues] OFF
+

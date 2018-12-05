@@ -9,6 +9,26 @@ PRINT N'CREATE foreign key constraints'
 GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/OBJ;6def4e
+ALTER TABLE [dbo].[umbracoUserGroup2NodePermission] WITH NOCHECK ADD CONSTRAINT [FK_umbracoUserGroup2NodePermission_umbracoUserGroup_id] FOREIGN KEY([userGroupId]) 
+REFERENCES [dbo].[umbracoUserGroup] ([id]) 
+GO -- SQRIBE/GO;6def4e
+
+-- SQRIBE/OBJ;6def4e
+ALTER TABLE [dbo].[umbracoUserGroup2NodePermission] WITH NOCHECK ADD CONSTRAINT [FK_umbracoUserGroup2NodePermission_umbracoNode_id] FOREIGN KEY([nodeId]) 
+REFERENCES [dbo].[umbracoNode] ([id]) 
+GO -- SQRIBE/GO;6def4e
+
+-- SQRIBE/OBJ;6def4e
+ALTER TABLE [dbo].[umbracoUserGroup2App] WITH NOCHECK ADD CONSTRAINT [FK_umbracoUserGroup2App_umbracoUserGroup_id] FOREIGN KEY([userGroupId]) 
+REFERENCES [dbo].[umbracoUserGroup] ([id]) 
+GO -- SQRIBE/GO;6def4e
+
+-- SQRIBE/OBJ;6def4e
+ALTER TABLE [dbo].[cmsMacroProperty] WITH NOCHECK ADD CONSTRAINT [FK_cmsMacroProperty_cmsMacro_id] FOREIGN KEY([macro]) 
+REFERENCES [dbo].[cmsMacro] ([id]) 
+GO -- SQRIBE/GO;6def4e
+
+-- SQRIBE/OBJ;6def4e
 ALTER TABLE [dbo].[umbracoUserStartNode] WITH NOCHECK ADD CONSTRAINT [FK_umbracoUserStartNode_umbracoUser_id] FOREIGN KEY([userId]) 
 REFERENCES [dbo].[umbracoUser] ([id]) 
 GO -- SQRIBE/GO;6def4e
@@ -326,24 +346,4 @@ GO -- SQRIBE/GO;6def4e
 -- SQRIBE/OBJ;6def4e
 ALTER TABLE [dbo].[umbracoUser2UserGroup] WITH NOCHECK ADD CONSTRAINT [FK_umbracoUser2UserGroup_umbracoUserGroup_id] FOREIGN KEY([userGroupId]) 
 REFERENCES [dbo].[umbracoUserGroup] ([id]) 
-GO -- SQRIBE/GO;6def4e
-
--- SQRIBE/OBJ;6def4e
-ALTER TABLE [dbo].[umbracoUserGroup2NodePermission] WITH NOCHECK ADD CONSTRAINT [FK_umbracoUserGroup2NodePermission_umbracoUserGroup_id] FOREIGN KEY([userGroupId]) 
-REFERENCES [dbo].[umbracoUserGroup] ([id]) 
-GO -- SQRIBE/GO;6def4e
-
--- SQRIBE/OBJ;6def4e
-ALTER TABLE [dbo].[umbracoUserGroup2NodePermission] WITH NOCHECK ADD CONSTRAINT [FK_umbracoUserGroup2NodePermission_umbracoNode_id] FOREIGN KEY([nodeId]) 
-REFERENCES [dbo].[umbracoNode] ([id]) 
-GO -- SQRIBE/GO;6def4e
-
--- SQRIBE/OBJ;6def4e
-ALTER TABLE [dbo].[umbracoUserGroup2App] WITH NOCHECK ADD CONSTRAINT [FK_umbracoUserGroup2App_umbracoUserGroup_id] FOREIGN KEY([userGroupId]) 
-REFERENCES [dbo].[umbracoUserGroup] ([id]) 
-GO -- SQRIBE/GO;6def4e
-
--- SQRIBE/OBJ;6def4e
-ALTER TABLE [dbo].[cmsMacroProperty] WITH NOCHECK ADD CONSTRAINT [FK_cmsMacroProperty_cmsMacro_id] FOREIGN KEY([macro]) 
-REFERENCES [dbo].[cmsMacro] ([id]) 
 GO -- SQRIBE/GO;6def4e

@@ -74,15 +74,11 @@ ALTER TABLE [dbo].[umbracoExternalLogin] ADD CONSTRAINT [df_umbracoExternalLogin
 GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/OBJ;6def4e
-ALTER TABLE [dbo].[umbracoRelation] ADD CONSTRAINT [df_umbracoRelation_datetime] DEFAULT (getdate()) FOR [datetime]
-GO -- SQRIBE/GO;6def4e
-
--- SQRIBE/OBJ;6def4e
-ALTER TABLE [dbo].[cmsDocumentType] ADD CONSTRAINT [df_cmsDocumentType_IsDefault] DEFAULT ('0') FOR [IsDefault]
-GO -- SQRIBE/GO;6def4e
-
--- SQRIBE/OBJ;6def4e
 ALTER TABLE [dbo].[umbracoMigration] ADD CONSTRAINT [df_umbracoMigration_createDate] DEFAULT (getdate()) FOR [createDate]
+GO -- SQRIBE/GO;6def4e
+
+-- SQRIBE/OBJ;6def4e
+ALTER TABLE [dbo].[umbracoRelation] ADD CONSTRAINT [df_umbracoRelation_datetime] DEFAULT (getdate()) FOR [datetime]
 GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/OBJ;6def4e
@@ -102,6 +98,10 @@ ALTER TABLE [dbo].[umbracoUser] ADD CONSTRAINT [df_umbracoUser_updateDate] DEFAU
 GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/OBJ;6def4e
+ALTER TABLE [dbo].[cmsDocumentType] ADD CONSTRAINT [df_cmsDocumentType_IsDefault] DEFAULT ('0') FOR [IsDefault]
+GO -- SQRIBE/GO;6def4e
+
+-- SQRIBE/OBJ;6def4e
 ALTER TABLE [dbo].[umbracoServer] ADD CONSTRAINT [df_umbracoServer_registeredDate] DEFAULT (getdate()) FOR [registeredDate]
 GO -- SQRIBE/GO;6def4e
 
@@ -110,15 +110,11 @@ ALTER TABLE [dbo].[cmsContentTypeAllowedContentType] ADD CONSTRAINT [df_cmsConte
 GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/OBJ;6def4e
-ALTER TABLE [dbo].[cmsContentVersion] ADD CONSTRAINT [df_cmsContentVersion_VersionDate] DEFAULT (getdate()) FOR [VersionDate]
+ALTER TABLE [dbo].[umbracoUserGroup] ADD CONSTRAINT [df_umbracoUserGroup_createDate] DEFAULT (getdate()) FOR [createDate]
 GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/OBJ;6def4e
-ALTER TABLE [dbo].[cmsDocument] ADD CONSTRAINT [df_cmsDocument_updateDate] DEFAULT (getdate()) FOR [updateDate]
-GO -- SQRIBE/GO;6def4e
-
--- SQRIBE/OBJ;6def4e
-ALTER TABLE [dbo].[cmsDocument] ADD CONSTRAINT [df_cmsDocument_newest] DEFAULT ('0') FOR [newest]
+ALTER TABLE [dbo].[umbracoUserGroup] ADD CONSTRAINT [df_umbracoUserGroup_updateDate] DEFAULT (getdate()) FOR [updateDate]
 GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/OBJ;6def4e
@@ -138,14 +134,6 @@ ALTER TABLE [dbo].[cmsPropertyTypeGroup] ADD CONSTRAINT [df_cmsPropertyTypeGroup
 GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/OBJ;6def4e
-ALTER TABLE [dbo].[umbracoUserGroup] ADD CONSTRAINT [df_umbracoUserGroup_createDate] DEFAULT (getdate()) FOR [createDate]
-GO -- SQRIBE/GO;6def4e
-
--- SQRIBE/OBJ;6def4e
-ALTER TABLE [dbo].[umbracoUserGroup] ADD CONSTRAINT [df_umbracoUserGroup_updateDate] DEFAULT (getdate()) FOR [updateDate]
-GO -- SQRIBE/GO;6def4e
-
--- SQRIBE/OBJ;6def4e
 ALTER TABLE [dbo].[cmsMemberType] ADD CONSTRAINT [df_cmsMemberType_memberCanEdit] DEFAULT ('0') FOR [memberCanEdit]
 GO -- SQRIBE/GO;6def4e
 
@@ -155,6 +143,18 @@ GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/OBJ;6def4e
 ALTER TABLE [dbo].[cmsMemberType] ADD CONSTRAINT [df_cmsMemberType_isSensitive] DEFAULT ('0') FOR [isSensitive]
+GO -- SQRIBE/GO;6def4e
+
+-- SQRIBE/OBJ;6def4e
+ALTER TABLE [dbo].[cmsContentVersion] ADD CONSTRAINT [df_cmsContentVersion_VersionDate] DEFAULT (getdate()) FOR [VersionDate]
+GO -- SQRIBE/GO;6def4e
+
+-- SQRIBE/OBJ;6def4e
+ALTER TABLE [dbo].[cmsDocument] ADD CONSTRAINT [df_cmsDocument_updateDate] DEFAULT (getdate()) FOR [updateDate]
+GO -- SQRIBE/GO;6def4e
+
+-- SQRIBE/OBJ;6def4e
+ALTER TABLE [dbo].[cmsDocument] ADD CONSTRAINT [df_cmsDocument_newest] DEFAULT ('0') FOR [newest]
 GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/OBJ;6def4e
@@ -174,14 +174,6 @@ ALTER TABLE [dbo].[cmsPropertyType] ADD CONSTRAINT [df_cmsPropertyType_UniqueID]
 GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/OBJ;6def4e
-ALTER TABLE [dbo].[umbracoCacheInstruction] ADD CONSTRAINT [df_umbracoCacheInstruction_instructionCount] DEFAULT ('1') FOR [instructionCount]
-GO -- SQRIBE/GO;6def4e
-
--- SQRIBE/OBJ;6def4e
-ALTER TABLE [dbo].[umbracoLog] ADD CONSTRAINT [df_umbracoLog_Datestamp] DEFAULT (getdate()) FOR [Datestamp]
-GO -- SQRIBE/GO;6def4e
-
--- SQRIBE/OBJ;6def4e
 ALTER TABLE [dbo].[umbracoNode] ADD CONSTRAINT [df_umbracoNode_trashed] DEFAULT ('0') FOR [trashed]
 GO -- SQRIBE/GO;6def4e
 
@@ -191,4 +183,12 @@ GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/OBJ;6def4e
 ALTER TABLE [dbo].[umbracoNode] ADD CONSTRAINT [df_umbracoNode_createDate] DEFAULT (getdate()) FOR [createDate]
+GO -- SQRIBE/GO;6def4e
+
+-- SQRIBE/OBJ;6def4e
+ALTER TABLE [dbo].[umbracoCacheInstruction] ADD CONSTRAINT [df_umbracoCacheInstruction_instructionCount] DEFAULT ('1') FOR [instructionCount]
+GO -- SQRIBE/GO;6def4e
+
+-- SQRIBE/OBJ;6def4e
+ALTER TABLE [dbo].[umbracoLog] ADD CONSTRAINT [df_umbracoLog_Datestamp] DEFAULT (getdate()) FOR [Datestamp]
 GO -- SQRIBE/GO;6def4e
