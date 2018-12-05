@@ -1,17 +1,19 @@
-﻿SET NUMERIC_ROUNDABORT OFF
+﻿
+SET NUMERIC_ROUNDABORT OFF
 SET ANSI_PADDING, ANSI_WARNINGS, CONCAT_NULL_YIELDS_NULL, ARITHABORT, QUOTED_IDENTIFIER, ANSI_NULLS, NOCOUNT ON
 SET DATEFORMAT YMD
 SET XACT_ABORT ON
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
 GO -- SQRIBE/GO;6def4e
 
--- SQRIBE/TABLE;6def4e
--- Adding 22 rows to dbo.umbracoCacheInstruction
-
-SET IDENTITY_INSERT [dbo].[umbracoCacheInstruction] ON
-
+IF @@ERROR <> 0 SET NOEXEC ON
 BEGIN TRANSACTION
 
+-- SQRIBE/TABLE;6def4e
+PRINT N'Add 22 rows to dbo.umbracoCacheInstruction...'
+GO -- SQRIBE/GO;6def4e
+
+SET IDENTITY_INSERT [dbo].[umbracoCacheInstruction] ON
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[umbracoCacheInstruction] ([id],[utcStamp],[jsonInstruction],[originated],[instructionCount]) VALUES (1,CONVERT(datetime,'2018-12-05 01:31:03.143',121),N'[{"RefreshType":3,"RefresherId":"dd12b6a0-14b9-46e8-8800-c154f74047c8","GuidId":"00000000-0000-0000-0000-000000000000","IntId":0,"JsonIds":"[1051]","JsonIdCount":1,"JsonPayload":null},{"RefreshType":4,"RefresherId":"6902e22c-9c10-483c-91f3-66b7cae9e2f5","GuidId":"00000000-0000-0000-0000-000000000000","IntId":0,"JsonIds":null,"JsonIdCount":1,"JsonPayload":"[{\"Alias\":\"homePage\",\"Id\":1052,\"PropertyTypeIds\":[],\"Type\":\"IContentType\",\"AliasChanged\":true,\"PropertyRemoved\":false,\"PropertyTypeAliasChanged\":false,\"DescendantPayloads\":[],\"WasDeleted\":false,\"IsNew\":true}]"}]',N'RJ-DESKTOP//LM/W3SVC/2/ROOT [P12492/D5] D15E0CFE1E524A4096BC77B57C0F07C8',2);
 -- SQRIBE/INSERT;6def4e
@@ -57,7 +59,20 @@ INSERT INTO [dbo].[umbracoCacheInstruction] ([id],[utcStamp],[jsonInstruction],[
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[umbracoCacheInstruction] ([id],[utcStamp],[jsonInstruction],[originated],[instructionCount]) VALUES (22,CONVERT(datetime,'2018-12-05 03:45:26.960',121),N'[{"RefreshType":3,"RefresherId":"dd12b6a0-14b9-46e8-8800-c154f74047c8","GuidId":"00000000-0000-0000-0000-000000000000","IntId":0,"JsonIds":"[1051]","JsonIdCount":1,"JsonPayload":null}]',N'RJ-DESKTOP//LM/W3SVC/2/ROOT [P23844/D2] 3136DD259F2847478019E5673A037933',1);
 
+IF @@ERROR <> 0 SET NOEXEC ON
+
 COMMIT TRANSACTION
 
-SET IDENTITY_INSERT [dbo].[umbracoCacheInstruction] OFF
+IF @@ERROR <> 0 SET NOEXEC ON
 
+DECLARE @Success AS BIT
+SET @Success = 1
+SET NOEXEC OFF
+
+IF (@Success = 1) PRINT 'Restore table data dbo.umbracoCacheInstruction succeeded'
+ELSE BEGIN
+    IF @@TRANCOUNT > 0 ROLLBACK TRANSACTION
+    PRINT 'Restore table data dbo.umbracoCacheInstruction failed'
+END
+
+SET IDENTITY_INSERT [dbo].[umbracoCacheInstruction] OFF

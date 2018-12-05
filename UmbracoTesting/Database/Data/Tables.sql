@@ -423,23 +423,6 @@ CREATE TABLE [dbo].[umbracoMigration]
 ) ON [PRIMARY]
 GO -- SQRIBE/GO;6def4e
 
-PRINT N'CREATE TABLE [dbo].[umbracoServer]'
-GO -- SQRIBE/GO;6def4e
-
--- SQRIBE/OBJ;6def4e
-CREATE TABLE [dbo].[umbracoServer]
-(
-    [id] [int] IDENTITY(1,1) NOT NULL,
-    [address] [nvarchar](500) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
-    [computerName] [nvarchar](255) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
-    [registeredDate] [datetime] NOT NULL,
-    [lastNotifiedDate] [datetime] NOT NULL,
-    [isActive] [bit] NOT NULL,
-    [isMaster] [bit] NOT NULL
-
-) ON [PRIMARY]
-GO -- SQRIBE/GO;6def4e
-
 PRINT N'CREATE TABLE [dbo].[umbracoUser]'
 GO -- SQRIBE/GO;6def4e
 
@@ -466,6 +449,23 @@ CREATE TABLE [dbo].[umbracoUser]
     [updateDate] [datetime] NOT NULL,
     [avatar] [nvarchar](500) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
     [tourData] [ntext] COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+
+) ON [PRIMARY]
+GO -- SQRIBE/GO;6def4e
+
+PRINT N'CREATE TABLE [dbo].[umbracoServer]'
+GO -- SQRIBE/GO;6def4e
+
+-- SQRIBE/OBJ;6def4e
+CREATE TABLE [dbo].[umbracoServer]
+(
+    [id] [int] IDENTITY(1,1) NOT NULL,
+    [address] [nvarchar](500) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+    [computerName] [nvarchar](255) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+    [registeredDate] [datetime] NOT NULL,
+    [lastNotifiedDate] [datetime] NOT NULL,
+    [isActive] [bit] NOT NULL,
+    [isMaster] [bit] NOT NULL
 
 ) ON [PRIMARY]
 GO -- SQRIBE/GO;6def4e

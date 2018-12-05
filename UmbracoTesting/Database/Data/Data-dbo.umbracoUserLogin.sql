@@ -1,15 +1,17 @@
-﻿SET NUMERIC_ROUNDABORT OFF
+﻿
+SET NUMERIC_ROUNDABORT OFF
 SET ANSI_PADDING, ANSI_WARNINGS, CONCAT_NULL_YIELDS_NULL, ARITHABORT, QUOTED_IDENTIFIER, ANSI_NULLS, NOCOUNT ON
 SET DATEFORMAT YMD
 SET XACT_ABORT ON
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
 GO -- SQRIBE/GO;6def4e
 
--- SQRIBE/TABLE;6def4e
--- Adding 5 rows to dbo.umbracoUserLogin
-
+IF @@ERROR <> 0 SET NOEXEC ON
 BEGIN TRANSACTION
 
+-- SQRIBE/TABLE;6def4e
+PRINT N'Add 5 rows to dbo.umbracoUserLogin...'
+GO -- SQRIBE/GO;6def4e
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[umbracoUserLogin] ([sessionId],[userId],[loggedInUtc],[lastValidatedUtc],[loggedOutUtc],[ipAddress]) VALUES ('B5AEEFA2-4E8C-457D-B602-16DBE777BC2E',0,CONVERT(datetime,'2018-12-05 03:23:33.957',121),CONVERT(datetime,'2018-12-05 03:45:26.933',121),CONVERT(datetime,NULL,121),N'::1');
 -- SQRIBE/INSERT;6def4e
@@ -21,5 +23,18 @@ INSERT INTO [dbo].[umbracoUserLogin] ([sessionId],[userId],[loggedInUtc],[lastVa
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[umbracoUserLogin] ([sessionId],[userId],[loggedInUtc],[lastValidatedUtc],[loggedOutUtc],[ipAddress]) VALUES ('A9D99FA8-F513-4EE0-BBE4-82BEFEB30CE8',0,CONVERT(datetime,'2018-12-05 01:25:13.310',121),CONVERT(datetime,'2018-12-05 01:30:47.980',121),CONVERT(datetime,NULL,121),N'::1');
 
+IF @@ERROR <> 0 SET NOEXEC ON
+
 COMMIT TRANSACTION
 
+IF @@ERROR <> 0 SET NOEXEC ON
+
+DECLARE @Success AS BIT
+SET @Success = 1
+SET NOEXEC OFF
+
+IF (@Success = 1) PRINT 'Restore table data dbo.umbracoUserLogin succeeded'
+ELSE BEGIN
+    IF @@TRANCOUNT > 0 ROLLBACK TRANSACTION
+    PRINT 'Restore table data dbo.umbracoUserLogin failed'
+END

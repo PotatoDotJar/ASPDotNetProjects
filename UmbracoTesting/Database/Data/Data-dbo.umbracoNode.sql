@@ -1,17 +1,19 @@
-﻿SET NUMERIC_ROUNDABORT OFF
+﻿
+SET NUMERIC_ROUNDABORT OFF
 SET ANSI_PADDING, ANSI_WARNINGS, CONCAT_NULL_YIELDS_NULL, ARITHABORT, QUOTED_IDENTIFIER, ANSI_NULLS, NOCOUNT ON
 SET DATEFORMAT YMD
 SET XACT_ABORT ON
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
 GO -- SQRIBE/GO;6def4e
 
--- SQRIBE/TABLE;6def4e
--- Adding 34 rows to dbo.umbracoNode
-
-SET IDENTITY_INSERT [dbo].[umbracoNode] ON
-
+IF @@ERROR <> 0 SET NOEXEC ON
 BEGIN TRANSACTION
 
+-- SQRIBE/TABLE;6def4e
+PRINT N'Add 34 rows to dbo.umbracoNode...'
+GO -- SQRIBE/GO;6def4e
+
+SET IDENTITY_INSERT [dbo].[umbracoNode] ON
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[umbracoNode] ([id],[trashed],[parentID],[nodeUser],[level],[path],[sortOrder],[uniqueID],[text],[nodeObjectType],[createDate]) VALUES (-97,0,-1,0,1,N'-1,-97',2,'AA2C52A0-CE87-4E65-A47C-7DF09358585D',N'List View - Members','30A2A501-1978-4DDB-A57B-F7EFED43BA3C',CONVERT(datetime,'2018-12-04 19:51:23.973',121));
 -- SQRIBE/INSERT;6def4e
@@ -81,7 +83,20 @@ INSERT INTO [dbo].[umbracoNode] ([id],[trashed],[parentID],[nodeUser],[level],[p
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[umbracoNode] ([id],[trashed],[parentID],[nodeUser],[level],[path],[sortOrder],[uniqueID],[text],[nodeObjectType],[createDate]) VALUES (1053,0,-1,0,1,N'-1,1053',0,'5823FBEE-96D1-4BDC-BCDC-954049ED2E3F',N'Welcome','C66BA18E-EAF3-4CFF-8A22-41B16D66A972',CONVERT(datetime,'2018-12-04 20:31:28.953',121));
 
+IF @@ERROR <> 0 SET NOEXEC ON
+
 COMMIT TRANSACTION
 
-SET IDENTITY_INSERT [dbo].[umbracoNode] OFF
+IF @@ERROR <> 0 SET NOEXEC ON
 
+DECLARE @Success AS BIT
+SET @Success = 1
+SET NOEXEC OFF
+
+IF (@Success = 1) PRINT 'Restore table data dbo.umbracoNode succeeded'
+ELSE BEGIN
+    IF @@TRANCOUNT > 0 ROLLBACK TRANSACTION
+    PRINT 'Restore table data dbo.umbracoNode failed'
+END
+
+SET IDENTITY_INSERT [dbo].[umbracoNode] OFF

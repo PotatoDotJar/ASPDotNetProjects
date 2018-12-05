@@ -86,10 +86,6 @@ ALTER TABLE [dbo].[umbracoMigration] ADD CONSTRAINT [df_umbracoMigration_createD
 GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/OBJ;6def4e
-ALTER TABLE [dbo].[umbracoServer] ADD CONSTRAINT [df_umbracoServer_registeredDate] DEFAULT (getdate()) FOR [registeredDate]
-GO -- SQRIBE/GO;6def4e
-
--- SQRIBE/OBJ;6def4e
 ALTER TABLE [dbo].[umbracoUser] ADD CONSTRAINT [df_umbracoUser_userDisabled] DEFAULT ('0') FOR [userDisabled]
 GO -- SQRIBE/GO;6def4e
 
@@ -103,6 +99,10 @@ GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/OBJ;6def4e
 ALTER TABLE [dbo].[umbracoUser] ADD CONSTRAINT [df_umbracoUser_updateDate] DEFAULT (getdate()) FOR [updateDate]
+GO -- SQRIBE/GO;6def4e
+
+-- SQRIBE/OBJ;6def4e
+ALTER TABLE [dbo].[umbracoServer] ADD CONSTRAINT [df_umbracoServer_registeredDate] DEFAULT (getdate()) FOR [registeredDate]
 GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/OBJ;6def4e

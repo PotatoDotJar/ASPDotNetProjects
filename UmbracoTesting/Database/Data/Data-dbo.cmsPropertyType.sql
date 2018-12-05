@@ -1,17 +1,19 @@
-﻿SET NUMERIC_ROUNDABORT OFF
+﻿
+SET NUMERIC_ROUNDABORT OFF
 SET ANSI_PADDING, ANSI_WARNINGS, CONCAT_NULL_YIELDS_NULL, ARITHABORT, QUOTED_IDENTIFIER, ANSI_NULLS, NOCOUNT ON
 SET DATEFORMAT YMD
 SET XACT_ABORT ON
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
 GO -- SQRIBE/GO;6def4e
 
--- SQRIBE/TABLE;6def4e
--- Adding 20 rows to dbo.cmsPropertyType
-
-SET IDENTITY_INSERT [dbo].[cmsPropertyType] ON
-
+IF @@ERROR <> 0 SET NOEXEC ON
 BEGIN TRANSACTION
 
+-- SQRIBE/TABLE;6def4e
+PRINT N'Add 20 rows to dbo.cmsPropertyType...'
+GO -- SQRIBE/GO;6def4e
+
+SET IDENTITY_INSERT [dbo].[cmsPropertyType] ON
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[cmsPropertyType] ([id],[dataTypeId],[contentTypeId],[propertyTypeGroupId],[Alias],[Name],[sortOrder],[mandatory],[validationRegExp],[Description],[UniqueID]) VALUES (6,1043,1032,3,N'umbracoFile',N'Upload image',0,0,NULL,NULL,'00000006-0000-0000-0000-000000000000');
 -- SQRIBE/INSERT;6def4e
@@ -53,7 +55,20 @@ INSERT INTO [dbo].[cmsPropertyType] ([id],[dataTypeId],[contentTypeId],[property
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[cmsPropertyType] ([id],[dataTypeId],[contentTypeId],[propertyTypeGroupId],[Alias],[Name],[sortOrder],[mandatory],[validationRegExp],[Description],[UniqueID]) VALUES (38,-87,1052,12,N'test',N'Test',1,0,NULL,NULL,'94299334-7AE2-401D-BBC7-D14C4285BC43');
 
+IF @@ERROR <> 0 SET NOEXEC ON
+
 COMMIT TRANSACTION
 
-SET IDENTITY_INSERT [dbo].[cmsPropertyType] OFF
+IF @@ERROR <> 0 SET NOEXEC ON
 
+DECLARE @Success AS BIT
+SET @Success = 1
+SET NOEXEC OFF
+
+IF (@Success = 1) PRINT 'Restore table data dbo.cmsPropertyType succeeded'
+ELSE BEGIN
+    IF @@TRANCOUNT > 0 ROLLBACK TRANSACTION
+    PRINT 'Restore table data dbo.cmsPropertyType failed'
+END
+
+SET IDENTITY_INSERT [dbo].[cmsPropertyType] OFF

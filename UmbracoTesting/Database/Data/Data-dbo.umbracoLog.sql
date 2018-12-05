@@ -1,17 +1,19 @@
-﻿SET NUMERIC_ROUNDABORT OFF
+﻿
+SET NUMERIC_ROUNDABORT OFF
 SET ANSI_PADDING, ANSI_WARNINGS, CONCAT_NULL_YIELDS_NULL, ARITHABORT, QUOTED_IDENTIFIER, ANSI_NULLS, NOCOUNT ON
 SET DATEFORMAT YMD
 SET XACT_ABORT ON
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
 GO -- SQRIBE/GO;6def4e
 
--- SQRIBE/TABLE;6def4e
--- Adding 23 rows to dbo.umbracoLog
-
-SET IDENTITY_INSERT [dbo].[umbracoLog] ON
-
+IF @@ERROR <> 0 SET NOEXEC ON
 BEGIN TRANSACTION
 
+-- SQRIBE/TABLE;6def4e
+PRINT N'Add 23 rows to dbo.umbracoLog...'
+GO -- SQRIBE/GO;6def4e
+
+SET IDENTITY_INSERT [dbo].[umbracoLog] ON
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (1,0,0,CONVERT(datetime,'2018-12-04 20:31:03.030',121),N'Save',N'Save Template performed by user');
 -- SQRIBE/INSERT;6def4e
@@ -59,7 +61,20 @@ INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (23,0,1051,CONVERT(datetime,'2018-12-04 22:45:26.957',121),N'Save',N'Save Template performed by user');
 
+IF @@ERROR <> 0 SET NOEXEC ON
+
 COMMIT TRANSACTION
 
-SET IDENTITY_INSERT [dbo].[umbracoLog] OFF
+IF @@ERROR <> 0 SET NOEXEC ON
 
+DECLARE @Success AS BIT
+SET @Success = 1
+SET NOEXEC OFF
+
+IF (@Success = 1) PRINT 'Restore table data dbo.umbracoLog succeeded'
+ELSE BEGIN
+    IF @@TRANCOUNT > 0 ROLLBACK TRANSACTION
+    PRINT 'Restore table data dbo.umbracoLog failed'
+END
+
+SET IDENTITY_INSERT [dbo].[umbracoLog] OFF
