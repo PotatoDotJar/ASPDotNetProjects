@@ -6,7 +6,7 @@ SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
 GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/TABLE;6def4e
--- Adding 13 rows to dbo.cmsDataTypePreValues
+-- Adding 16 rows to dbo.cmsDataTypePreValues
 
 SET IDENTITY_INSERT [dbo].[cmsDataTypePreValues] ON
 
@@ -31,13 +31,45 @@ INSERT INTO [dbo].[cmsDataTypePreValues] ([id],[datatypeNodeId],[value],[sortord
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[cmsDataTypePreValues] ([id],[datatypeNodeId],[value],[sortorder],[alias]) VALUES (-1,-97,N'10',1,N'pageSize');
 -- SQRIBE/INSERT;6def4e
-INSERT INTO [dbo].[cmsDataTypePreValues] ([id],[datatypeNodeId],[value],[sortorder],[alias]) VALUES (3,-87,N',code,undo,redo,cut,copy,mcepasteword,stylepicker,bold,italic,bullist,numlist,outdent,indent,mcelink,unlink,mceinsertanchor,mceimage,umbracomacro,mceinserttable,umbracoembed,mcecharmap,|1|1,2,3,|0|500,400|1049,|true|',0,N'');
--- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[cmsDataTypePreValues] ([id],[datatypeNodeId],[value],[sortorder],[alias]) VALUES (4,1041,N'default',0,N'group');
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[cmsDataTypePreValues] ([id],[datatypeNodeId],[value],[sortorder],[alias]) VALUES (5,1041,N'Json',0,N'storageType');
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[cmsDataTypePreValues] ([id],[datatypeNodeId],[value],[sortorder],[alias]) VALUES (6,1049,N'1',0,N'multiPicker');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsDataTypePreValues] ([id],[datatypeNodeId],[value],[sortorder],[alias]) VALUES (7,1062,N'default',1,N'group');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsDataTypePreValues] ([id],[datatypeNodeId],[value],[sortorder],[alias]) VALUES (8,1062,N'Csv',2,N'storageType');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsDataTypePreValues] ([id],[datatypeNodeId],[value],[sortorder],[alias]) VALUES (11,-87,N'{
+  "toolbar": [
+    "code",
+    "undo",
+    "styleselect",
+    "bold",
+    "italic",
+    "alignleft",
+    "aligncenter",
+    "alignright",
+    "bullist",
+    "numlist",
+    "outdent",
+    "indent",
+    "link",
+    "umbmediapicker",
+    "umbmacro",
+    "umbembeddialog"
+  ],
+  "stylesheets": [
+    "rte"
+  ],
+  "dimensions": {
+    "height": 500
+  },
+  "maxImageSize": 500
+}',1,N'editor');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsDataTypePreValues] ([id],[datatypeNodeId],[value],[sortorder],[alias]) VALUES (12,-87,N'0',2,N'hideLabel');
 
 COMMIT TRANSACTION
 

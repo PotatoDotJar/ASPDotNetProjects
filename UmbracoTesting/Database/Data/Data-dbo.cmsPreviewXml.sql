@@ -6,7 +6,7 @@ SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
 GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/TABLE;6def4e
--- Adding 8 rows to dbo.cmsPreviewXml
+-- Adding 12 rows to dbo.cmsPreviewXml
 
 BEGIN TRANSACTION
 
@@ -26,6 +26,14 @@ INSERT INTO [dbo].[cmsPreviewXml] ([nodeId],[versionId],[timestamp],[xml]) VALUE
 INSERT INTO [dbo].[cmsPreviewXml] ([nodeId],[versionId],[timestamp],[xml]) VALUES (1061,'B3BFFB46-AEF3-403A-A0E4-DB9470FA6CEB',CONVERT(datetime,'2018-12-05 13:41:29.033',121),N'<homePage id="1061" key="0452c9de-9efa-46a1-9975-6fdd0463c424" parentID="-1" level="1" creatorID="0" sortOrder="0" createDate="2018-12-05T13:37:16" updateDate="2018-12-05T13:41:29" nodeName="Home" urlName="home" path="-1,1061" isDoc="" nodeType="1052" creatorName="Richard Nader" writerName="Richard Nader" writerID="0" template="1051" nodeTypeAlias="homePage" isPublished="true"><metaTitle><![CDATA[This is a meta title]]></metaTitle><metaRobots><![CDATA[["noindex","nofollow"]]]></metaRobots><metaKeywords><![CDATA[["this","is","keywords"]]]></metaKeywords><metaDescription><![CDATA[This is a description]]></metaDescription><bodyText><![CDATA[<p>This is some body text!</p>]]></bodyText></homePage>');
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[cmsPreviewXml] ([nodeId],[versionId],[timestamp],[xml]) VALUES (1061,'A35C531C-D06C-4410-A325-E93E0EC9FF97',CONVERT(datetime,'2018-12-05 13:37:53.623',121),N'<homePage id="1061" key="0452c9de-9efa-46a1-9975-6fdd0463c424" parentID="-1" level="1" creatorID="0" sortOrder="0" createDate="2018-12-05T13:37:16" updateDate="2018-12-05T13:37:53" nodeName="Home" urlName="home" path="-1,1061" isDoc="" nodeType="1052" creatorName="Richard Nader" writerName="Richard Nader" writerID="0" template="1051" nodeTypeAlias="homePage" isPublished="true"><bodyText><![CDATA[<p>This is some body text!</p>]]></bodyText></homePage>');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsPreviewXml] ([nodeId],[versionId],[timestamp],[xml]) VALUES (1061,'CDC478F7-6912-4537-BE30-FCB720E02FC6',CONVERT(datetime,'2018-12-05 15:51:30.060',121),N'<homePage id="1061" key="0452c9de-9efa-46a1-9975-6fdd0463c424" parentID="-1" level="1" creatorID="0" sortOrder="0" createDate="2018-12-05T13:37:16" updateDate="2018-12-05T15:51:30" nodeName="Home" urlName="home" path="-1,1061" isDoc="" nodeType="1052" creatorName="Richard Nader" writerName="Richard Nader" writerID="0" template="1051" nodeTypeAlias="homePage" isPublished="true"><metaTitle><![CDATA[This is a meta title]]></metaTitle><metaRobots><![CDATA[noindex, nofollow]]></metaRobots><metaKeywords><![CDATA[this, is, keywords]]></metaKeywords><metaDescription><![CDATA[This is a description]]></metaDescription><bodyText><![CDATA[<p>This is some body text!</p>]]></bodyText></homePage>');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsPreviewXml] ([nodeId],[versionId],[timestamp],[xml]) VALUES (1063,'433344AD-7C2F-4B5D-B4F9-2AB91B589B2B',CONVERT(datetime,'2018-12-05 15:59:50.427',121),N'<textPage id="1063" key="b2bba275-ddc4-4582-a44e-1a756b9092e3" parentID="1061" level="2" creatorID="0" sortOrder="0" createDate="2018-12-05T15:55:21" updateDate="2018-12-05T15:59:50" nodeName="About Us" urlName="about-us" path="-1,1061,1063" isDoc="" nodeType="1055" creatorName="Richard Nader" writerName="Richard Nader" writerID="0" template="1054" nodeTypeAlias="textPage" isPublished="true"><pageContent><![CDATA[<p style="text-align: center;"><span class="Header">This is a Heading!</span></p>]]></pageContent></textPage>');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsPreviewXml] ([nodeId],[versionId],[timestamp],[xml]) VALUES (1063,'7A1BA00D-45F0-44E0-A144-A52AD9F7DB0E',CONVERT(datetime,'2018-12-05 15:55:21.937',121),N'<textPage id="1063" key="b2bba275-ddc4-4582-a44e-1a756b9092e3" parentID="1061" level="2" creatorID="0" sortOrder="0" createDate="2018-12-05T15:55:21" updateDate="2018-12-05T15:55:21" nodeName="About Us" urlName="about-us" path="-1,1061,1063" isDoc="" nodeType="1055" creatorName="Richard Nader" writerName="Richard Nader" writerID="0" template="1054" nodeTypeAlias="textPage" isPublished="false" />');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsPreviewXml] ([nodeId],[versionId],[timestamp],[xml]) VALUES (1063,'1638A112-EB7D-4B5D-ADDC-CC810B6F41E2',CONVERT(datetime,'2018-12-05 15:55:26.800',121),N'<textPage id="1063" key="b2bba275-ddc4-4582-a44e-1a756b9092e3" parentID="1061" level="2" creatorID="0" sortOrder="0" createDate="2018-12-05T15:55:21" updateDate="2018-12-05T15:55:26" nodeName="About Us" urlName="about-us" path="-1,1061,1063" isDoc="" nodeType="1055" creatorName="Richard Nader" writerName="Richard Nader" writerID="0" template="1054" nodeTypeAlias="textPage" isPublished="true"><pageContent><![CDATA[<p>Hello</p>]]></pageContent></textPage>');
 
 COMMIT TRANSACTION
 

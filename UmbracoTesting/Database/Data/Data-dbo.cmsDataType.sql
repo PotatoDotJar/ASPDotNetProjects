@@ -6,7 +6,7 @@ SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
 GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/TABLE;6def4e
--- Adding 24 rows to dbo.cmsDataType
+-- Adding 25 rows to dbo.cmsDataType
 
 SET IDENTITY_INSERT [dbo].[cmsDataType] ON
 
@@ -60,6 +60,8 @@ INSERT INTO [dbo].[cmsDataType] ([pk],[nodeId],[propertyEditorAlias],[dbType]) V
 INSERT INTO [dbo].[cmsDataType] ([pk],[nodeId],[propertyEditorAlias],[dbType]) VALUES (29,1049,N'Umbraco.MediaPicker2',N'Ntext');
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[cmsDataType] ([pk],[nodeId],[propertyEditorAlias],[dbType]) VALUES (30,1050,N'Umbraco.RelatedLinks2',N'Ntext');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsDataType] ([pk],[nodeId],[propertyEditorAlias],[dbType]) VALUES (31,1062,N'Umbraco.Tags',N'Nvarchar');
 
 COMMIT TRANSACTION
 

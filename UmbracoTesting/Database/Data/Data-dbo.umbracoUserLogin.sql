@@ -6,12 +6,14 @@ SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
 GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/TABLE;6def4e
--- Adding 6 rows to dbo.umbracoUserLogin
+-- Adding 7 rows to dbo.umbracoUserLogin
 
 BEGIN TRANSACTION
 
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[umbracoUserLogin] ([sessionId],[userId],[loggedInUtc],[lastValidatedUtc],[loggedOutUtc],[ipAddress]) VALUES ('B5AEEFA2-4E8C-457D-B602-16DBE777BC2E',0,CONVERT(datetime,'2018-12-05 03:23:33.957',121),CONVERT(datetime,'2018-12-05 03:45:26.933',121),CONVERT(datetime,NULL,121),N'::1');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoUserLogin] ([sessionId],[userId],[loggedInUtc],[lastValidatedUtc],[loggedOutUtc],[ipAddress]) VALUES ('780B638B-0220-4157-9197-23B83EBA2628',0,CONVERT(datetime,'2018-12-05 20:32:48.230',121),CONVERT(datetime,'2018-12-05 21:00:37.427',121),CONVERT(datetime,NULL,121),N'::1');
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[umbracoUserLogin] ([sessionId],[userId],[loggedInUtc],[lastValidatedUtc],[loggedOutUtc],[ipAddress]) VALUES ('E1070BD7-3D30-4C1C-BD86-265088FD5243',0,CONVERT(datetime,'2018-12-05 02:13:12.000',121),CONVERT(datetime,'2018-12-05 02:28:17.123',121),CONVERT(datetime,NULL,121),N'::1');
 -- SQRIBE/INSERT;6def4e

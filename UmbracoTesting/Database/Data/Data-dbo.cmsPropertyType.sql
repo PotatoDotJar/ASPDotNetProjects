@@ -59,9 +59,9 @@ INSERT INTO [dbo].[cmsPropertyType] ([id],[dataTypeId],[contentTypeId],[property
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[cmsPropertyType] ([id],[dataTypeId],[contentTypeId],[propertyTypeGroupId],[Alias],[Name],[sortOrder],[mandatory],[validationRegExp],[Description],[UniqueID]) VALUES (44,-89,1059,15,N'metaDescription',N'Meta Description',1,0,NULL,NULL,'71444643-F677-4460-AA46-BFF150250978');
 -- SQRIBE/INSERT;6def4e
-INSERT INTO [dbo].[cmsPropertyType] ([id],[dataTypeId],[contentTypeId],[propertyTypeGroupId],[Alias],[Name],[sortOrder],[mandatory],[validationRegExp],[Description],[UniqueID]) VALUES (45,1041,1059,15,N'metaKeywords',N'Meta Keywords',2,0,NULL,NULL,'B82B6A3F-31E6-43E5-B4DC-5B784FB65422');
+INSERT INTO [dbo].[cmsPropertyType] ([id],[dataTypeId],[contentTypeId],[propertyTypeGroupId],[Alias],[Name],[sortOrder],[mandatory],[validationRegExp],[Description],[UniqueID]) VALUES (45,-88,1059,15,N'metaKeywords',N'Meta Keywords',2,0,NULL,N'Input as comma separated values.','B82B6A3F-31E6-43E5-B4DC-5B784FB65422');
 -- SQRIBE/INSERT;6def4e
-INSERT INTO [dbo].[cmsPropertyType] ([id],[dataTypeId],[contentTypeId],[propertyTypeGroupId],[Alias],[Name],[sortOrder],[mandatory],[validationRegExp],[Description],[UniqueID]) VALUES (46,1041,1059,15,N'metaRobots',N'Meta Robots',3,0,NULL,NULL,'9A594926-77B2-4CD5-91ED-1D26FF1AAE95');
+INSERT INTO [dbo].[cmsPropertyType] ([id],[dataTypeId],[contentTypeId],[propertyTypeGroupId],[Alias],[Name],[sortOrder],[mandatory],[validationRegExp],[Description],[UniqueID]) VALUES (46,-88,1059,15,N'metaRobots',N'Meta Robots',3,0,NULL,N'Input as comma separated values.','9A594926-77B2-4CD5-91ED-1D26FF1AAE95');
 
 COMMIT TRANSACTION
 

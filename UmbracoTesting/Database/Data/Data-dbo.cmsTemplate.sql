@@ -24,31 +24,34 @@ INSERT INTO [dbo].[cmsTemplate] ([pk],[nodeId],[alias],[design]) VALUES (2,1054,
 @using ContentModels = Umbraco.Web.PublishedContentModels;
 @{
 	Layout = "MasterPage.cshtml";
-}');
+}
+
+
+@Umbraco.Field("pageContent")');
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[cmsTemplate] ([pk],[nodeId],[alias],[design]) VALUES (3,1056,N'MasterPage',N'@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
 	Layout = null;
+
 }
 
 <html>
-    <head>
-        <title>This is the master title</title>
-        
-        <meta name="title" content="">
-        <meta name="description" content="@Umbraco.Field("metaDescription")">
-        <meta name="robots" content="@Umbraco.Field("metaRobots").ToHtmlString()">
-        <meta name="keywords" content="@Umbraco.Field("metaKeywords").ToHtmlString()">
-        
-    </head>
-    <body>
-        @Html.Partial("_Header")
-        @RenderBody()
-        
-        
-    </body>
-    
-    
+	<head>
+		<title>This is the master title</title>
+		
+		<meta name="title" content="@Umbraco.Field("metaTitle")">
+		<meta name="description" content="@Umbraco.Field("metaDescription")">
+		<meta name="robots" content="@Umbraco.Field("metaRobots")">
+		<meta name="keywords" content="@Umbraco.Field("metaKeywords")">
+		
+	</head>
+	<body>
+		@Html.Partial("_Header")
+		@RenderBody()
+		@Html.Partial("_Footer")
+	</body>
+	
+	
 </html>
 ');
 

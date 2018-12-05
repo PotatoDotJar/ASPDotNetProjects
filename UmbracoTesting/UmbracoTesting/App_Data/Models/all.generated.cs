@@ -8,8 +8,8 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "c3ec9b8a262efcb1")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.4")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "47003859b3d2551")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.6")]
 
 
 // FILE: models.generated.cs
@@ -93,19 +93,19 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Meta Keywords
+		/// Meta Keywords: Input as comma separated values.
 		///</summary>
 		[ImplementPropertyType("metaKeywords")]
-		public IEnumerable<string> MetaKeywords
+		public string MetaKeywords
 		{
 			get { return Umbraco.Web.PublishedContentModels.SEO.GetMetaKeywords(this); }
 		}
 
 		///<summary>
-		/// Meta Robots
+		/// Meta Robots: Input as comma separated values.
 		///</summary>
 		[ImplementPropertyType("metaRobots")]
-		public IEnumerable<string> MetaRobots
+		public string MetaRobots
 		{
 			get { return Umbraco.Web.PublishedContentModels.SEO.GetMetaRobots(this); }
 		}
@@ -163,10 +163,10 @@ namespace Umbraco.Web.PublishedContentModels
 		string MetaDescription { get; }
 
 		/// <summary>Meta Keywords</summary>
-		IEnumerable<string> MetaKeywords { get; }
+		string MetaKeywords { get; }
 
 		/// <summary>Meta Robots</summary>
-		IEnumerable<string> MetaRobots { get; }
+		string MetaRobots { get; }
 
 		/// <summary>Meta Title</summary>
 		string MetaTitle { get; }
@@ -210,28 +210,28 @@ namespace Umbraco.Web.PublishedContentModels
 		public static string GetMetaDescription(ISEO that) { return that.GetPropertyValue<string>("metaDescription"); }
 
 		///<summary>
-		/// Meta Keywords
+		/// Meta Keywords: Input as comma separated values.
 		///</summary>
 		[ImplementPropertyType("metaKeywords")]
-		public IEnumerable<string> MetaKeywords
+		public string MetaKeywords
 		{
 			get { return GetMetaKeywords(this); }
 		}
 
 		/// <summary>Static getter for Meta Keywords</summary>
-		public static IEnumerable<string> GetMetaKeywords(ISEO that) { return that.GetPropertyValue<IEnumerable<string>>("metaKeywords"); }
+		public static string GetMetaKeywords(ISEO that) { return that.GetPropertyValue<string>("metaKeywords"); }
 
 		///<summary>
-		/// Meta Robots
+		/// Meta Robots: Input as comma separated values.
 		///</summary>
 		[ImplementPropertyType("metaRobots")]
-		public IEnumerable<string> MetaRobots
+		public string MetaRobots
 		{
 			get { return GetMetaRobots(this); }
 		}
 
 		/// <summary>Static getter for Meta Robots</summary>
-		public static IEnumerable<string> GetMetaRobots(ISEO that) { return that.GetPropertyValue<IEnumerable<string>>("metaRobots"); }
+		public static string GetMetaRobots(ISEO that) { return that.GetPropertyValue<string>("metaRobots"); }
 
 		///<summary>
 		/// Meta Title

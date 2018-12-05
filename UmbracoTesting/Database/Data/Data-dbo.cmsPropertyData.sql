@@ -6,7 +6,7 @@ SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
 GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/TABLE;6def4e
--- Adding 20 rows to dbo.cmsPropertyData
+-- Adding 29 rows to dbo.cmsPropertyData
 
 SET IDENTITY_INSERT [dbo].[cmsPropertyData] ON
 
@@ -52,6 +52,24 @@ INSERT INTO [dbo].[cmsPropertyData] ([id],[contentNodeId],[versionId],[propertyt
 INSERT INTO [dbo].[cmsPropertyData] ([id],[contentNodeId],[versionId],[propertytypeid],[dataInt],[dataDecimal],[dataDate],[dataNvarchar],[dataNtext]) VALUES (35,1061,'B3BFFB46-AEF3-403A-A0E4-DB9470FA6CEB',37,NULL,NULL,CONVERT(datetime,NULL,121),NULL,N'<p>This is some body text!</p>');
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[cmsPropertyData] ([id],[contentNodeId],[versionId],[propertytypeid],[dataInt],[dataDecimal],[dataDate],[dataNvarchar],[dataNtext]) VALUES (36,1061,'B3BFFB46-AEF3-403A-A0E4-DB9470FA6CEB',38,NULL,NULL,CONVERT(datetime,NULL,121),NULL,N'');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsPropertyData] ([id],[contentNodeId],[versionId],[propertytypeid],[dataInt],[dataDecimal],[dataDate],[dataNvarchar],[dataNtext]) VALUES (37,1061,'CDC478F7-6912-4537-BE30-FCB720E02FC6',43,NULL,NULL,CONVERT(datetime,NULL,121),N'This is a meta title',NULL);
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsPropertyData] ([id],[contentNodeId],[versionId],[propertytypeid],[dataInt],[dataDecimal],[dataDate],[dataNvarchar],[dataNtext]) VALUES (38,1061,'CDC478F7-6912-4537-BE30-FCB720E02FC6',46,NULL,NULL,CONVERT(datetime,NULL,121),N'noindex, nofollow',NULL);
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsPropertyData] ([id],[contentNodeId],[versionId],[propertytypeid],[dataInt],[dataDecimal],[dataDate],[dataNvarchar],[dataNtext]) VALUES (39,1061,'CDC478F7-6912-4537-BE30-FCB720E02FC6',45,NULL,NULL,CONVERT(datetime,NULL,121),N'this, is, keywords',NULL);
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsPropertyData] ([id],[contentNodeId],[versionId],[propertytypeid],[dataInt],[dataDecimal],[dataDate],[dataNvarchar],[dataNtext]) VALUES (40,1061,'CDC478F7-6912-4537-BE30-FCB720E02FC6',44,NULL,NULL,CONVERT(datetime,NULL,121),NULL,N'This is a description');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsPropertyData] ([id],[contentNodeId],[versionId],[propertytypeid],[dataInt],[dataDecimal],[dataDate],[dataNvarchar],[dataNtext]) VALUES (41,1061,'CDC478F7-6912-4537-BE30-FCB720E02FC6',37,NULL,NULL,CONVERT(datetime,NULL,121),NULL,N'<p>This is some body text!</p>');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsPropertyData] ([id],[contentNodeId],[versionId],[propertytypeid],[dataInt],[dataDecimal],[dataDate],[dataNvarchar],[dataNtext]) VALUES (42,1061,'CDC478F7-6912-4537-BE30-FCB720E02FC6',38,NULL,NULL,CONVERT(datetime,NULL,121),NULL,N'');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsPropertyData] ([id],[contentNodeId],[versionId],[propertytypeid],[dataInt],[dataDecimal],[dataDate],[dataNvarchar],[dataNtext]) VALUES (43,1063,'7A1BA00D-45F0-44E0-A144-A52AD9F7DB0E',39,NULL,NULL,CONVERT(datetime,NULL,121),NULL,N'');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsPropertyData] ([id],[contentNodeId],[versionId],[propertytypeid],[dataInt],[dataDecimal],[dataDate],[dataNvarchar],[dataNtext]) VALUES (44,1063,'1638A112-EB7D-4B5D-ADDC-CC810B6F41E2',39,NULL,NULL,CONVERT(datetime,NULL,121),NULL,N'<p>Hello</p>');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsPropertyData] ([id],[contentNodeId],[versionId],[propertytypeid],[dataInt],[dataDecimal],[dataDate],[dataNvarchar],[dataNtext]) VALUES (45,1063,'433344AD-7C2F-4B5D-B4F9-2AB91B589B2B',39,NULL,NULL,CONVERT(datetime,NULL,121),NULL,N'<p style="text-align: center;"><span class="Header">This is a Heading!</span></p>');
 
 COMMIT TRANSACTION
 

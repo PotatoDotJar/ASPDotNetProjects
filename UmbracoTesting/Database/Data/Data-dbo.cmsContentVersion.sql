@@ -6,7 +6,7 @@ SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
 GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/TABLE;6def4e
--- Adding 10 rows to dbo.cmsContentVersion
+-- Adding 14 rows to dbo.cmsContentVersion
 
 SET IDENTITY_INSERT [dbo].[cmsContentVersion] ON
 
@@ -32,6 +32,14 @@ INSERT INTO [dbo].[cmsContentVersion] ([id],[ContentId],[VersionId],[VersionDate
 INSERT INTO [dbo].[cmsContentVersion] ([id],[ContentId],[VersionId],[VersionDate]) VALUES (13,1061,'A35C531C-D06C-4410-A325-E93E0EC9FF97',CONVERT(datetime,'2018-12-05 13:37:53.610',121));
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[cmsContentVersion] ([id],[ContentId],[VersionId],[VersionDate]) VALUES (14,1061,'B3BFFB46-AEF3-403A-A0E4-DB9470FA6CEB',CONVERT(datetime,'2018-12-05 13:41:29.020',121));
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsContentVersion] ([id],[ContentId],[VersionId],[VersionDate]) VALUES (15,1061,'CDC478F7-6912-4537-BE30-FCB720E02FC6',CONVERT(datetime,'2018-12-05 15:51:30.003',121));
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsContentVersion] ([id],[ContentId],[VersionId],[VersionDate]) VALUES (16,1063,'7A1BA00D-45F0-44E0-A144-A52AD9F7DB0E',CONVERT(datetime,'2018-12-05 15:55:21.910',121));
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsContentVersion] ([id],[ContentId],[VersionId],[VersionDate]) VALUES (17,1063,'1638A112-EB7D-4B5D-ADDC-CC810B6F41E2',CONVERT(datetime,'2018-12-05 15:55:26.773',121));
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsContentVersion] ([id],[ContentId],[VersionId],[VersionDate]) VALUES (18,1063,'433344AD-7C2F-4B5D-B4F9-2AB91B589B2B',CONVERT(datetime,'2018-12-05 15:59:50.403',121));
 
 COMMIT TRANSACTION
 
