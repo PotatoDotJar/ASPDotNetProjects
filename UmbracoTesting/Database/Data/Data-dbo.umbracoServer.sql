@@ -13,9 +13,9 @@ SET IDENTITY_INSERT [dbo].[umbracoServer] ON
 BEGIN TRANSACTION
 
 -- SQRIBE/INSERT;6def4e
-INSERT INTO [dbo].[umbracoServer] ([id],[address],[computerName],[registeredDate],[lastNotifiedDate],[isActive],[isMaster]) VALUES (1,N'http://localhost:55798/umbraco',N'RJ-DESKTOP//LM/W3SVC/2/ROOT',CONVERT(datetime,'2018-12-04 19:51:44.543',121),CONVERT(datetime,'2018-12-05 13:44:23.433',121),0,0);
+INSERT INTO [dbo].[umbracoServer] ([id],[address],[computerName],[registeredDate],[lastNotifiedDate],[isActive],[isMaster]) VALUES (1,N'http://localhost:55798/umbraco',N'RJ-DESKTOP//LM/W3SVC/2/ROOT',CONVERT(datetime,'2018-12-04 19:51:44.543',121),CONVERT(datetime,'2018-12-05 21:16:56.293',121),0,0);
 -- SQRIBE/INSERT;6def4e
-INSERT INTO [dbo].[umbracoServer] ([id],[address],[computerName],[registeredDate],[lastNotifiedDate],[isActive],[isMaster]) VALUES (2,N'http://localhost:55798/umbraco',N'RJ-LAPTOP//LM/W3SVC/2/ROOT',CONVERT(datetime,'2018-12-04 23:58:59.107',121),CONVERT(datetime,'2018-12-05 16:00:47.053',121),1,1);
+INSERT INTO [dbo].[umbracoServer] ([id],[address],[computerName],[registeredDate],[lastNotifiedDate],[isActive],[isMaster]) VALUES (2,N'http://localhost:55798/umbraco',N'RJ-LAPTOP//LM/W3SVC/2/ROOT',CONVERT(datetime,'2018-12-04 23:58:59.107',121),CONVERT(datetime,'2018-12-05 21:21:17.027',121),1,0);
 
 COMMIT TRANSACTION
 

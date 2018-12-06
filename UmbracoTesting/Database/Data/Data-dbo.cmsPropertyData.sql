@@ -6,7 +6,7 @@ SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
 GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/TABLE;6def4e
--- Adding 29 rows to dbo.cmsPropertyData
+-- Adding 30 rows to dbo.cmsPropertyData
 
 SET IDENTITY_INSERT [dbo].[cmsPropertyData] ON
 
@@ -70,6 +70,8 @@ INSERT INTO [dbo].[cmsPropertyData] ([id],[contentNodeId],[versionId],[propertyt
 INSERT INTO [dbo].[cmsPropertyData] ([id],[contentNodeId],[versionId],[propertytypeid],[dataInt],[dataDecimal],[dataDate],[dataNvarchar],[dataNtext]) VALUES (44,1063,'1638A112-EB7D-4B5D-ADDC-CC810B6F41E2',39,NULL,NULL,CONVERT(datetime,NULL,121),NULL,N'<p>Hello</p>');
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[cmsPropertyData] ([id],[contentNodeId],[versionId],[propertytypeid],[dataInt],[dataDecimal],[dataDate],[dataNvarchar],[dataNtext]) VALUES (45,1063,'433344AD-7C2F-4B5D-B4F9-2AB91B589B2B',39,NULL,NULL,CONVERT(datetime,NULL,121),NULL,N'<p style="text-align: center;"><span class="Header">This is a Heading!</span></p>');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsPropertyData] ([id],[contentNodeId],[versionId],[propertytypeid],[dataInt],[dataDecimal],[dataDate],[dataNvarchar],[dataNtext]) VALUES (46,1064,'293215FC-B1C8-44B5-84B4-06CE33AF6AB1',39,NULL,NULL,CONVERT(datetime,NULL,121),NULL,N'<p><strong>sdfsdfsdfsdfsdfsdfsdfsdf</strong></p>');
 
 COMMIT TRANSACTION
 

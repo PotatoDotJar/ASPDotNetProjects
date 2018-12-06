@@ -6,7 +6,7 @@ SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
 GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/TABLE;6def4e
--- Adding 12 rows to dbo.cmsPreviewXml
+-- Adding 13 rows to dbo.cmsPreviewXml
 
 BEGIN TRANSACTION
 
@@ -34,6 +34,8 @@ INSERT INTO [dbo].[cmsPreviewXml] ([nodeId],[versionId],[timestamp],[xml]) VALUE
 INSERT INTO [dbo].[cmsPreviewXml] ([nodeId],[versionId],[timestamp],[xml]) VALUES (1063,'7A1BA00D-45F0-44E0-A144-A52AD9F7DB0E',CONVERT(datetime,'2018-12-05 15:55:21.937',121),N'<textPage id="1063" key="b2bba275-ddc4-4582-a44e-1a756b9092e3" parentID="1061" level="2" creatorID="0" sortOrder="0" createDate="2018-12-05T15:55:21" updateDate="2018-12-05T15:55:21" nodeName="About Us" urlName="about-us" path="-1,1061,1063" isDoc="" nodeType="1055" creatorName="Richard Nader" writerName="Richard Nader" writerID="0" template="1054" nodeTypeAlias="textPage" isPublished="false" />');
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[cmsPreviewXml] ([nodeId],[versionId],[timestamp],[xml]) VALUES (1063,'1638A112-EB7D-4B5D-ADDC-CC810B6F41E2',CONVERT(datetime,'2018-12-05 15:55:26.800',121),N'<textPage id="1063" key="b2bba275-ddc4-4582-a44e-1a756b9092e3" parentID="1061" level="2" creatorID="0" sortOrder="0" createDate="2018-12-05T15:55:21" updateDate="2018-12-05T15:55:26" nodeName="About Us" urlName="about-us" path="-1,1061,1063" isDoc="" nodeType="1055" creatorName="Richard Nader" writerName="Richard Nader" writerID="0" template="1054" nodeTypeAlias="textPage" isPublished="true"><pageContent><![CDATA[<p>Hello</p>]]></pageContent></textPage>');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsPreviewXml] ([nodeId],[versionId],[timestamp],[xml]) VALUES (1064,'293215FC-B1C8-44B5-84B4-06CE33AF6AB1',CONVERT(datetime,'2018-12-05 21:16:45.057',121),N'<textPage id="1064" key="3986933c-b3eb-4ea6-9594-d6542db2b5f0" parentID="1061" level="2" creatorID="0" sortOrder="1" createDate="2018-12-05T21:16:18" updateDate="2018-12-05T21:16:45" nodeName="Contact Us" urlName="contact-us" path="-1,1061,1064" isDoc="" nodeType="1055" creatorName="Richard Nader" writerName="Richard Nader" writerID="0" template="1054" nodeTypeAlias="textPage" isPublished="true"><pageContent><![CDATA[<p><strong>sdfsdfsdfsdfsdfsdfsdfsdf</strong></p>]]></pageContent></textPage>');
 
 COMMIT TRANSACTION
 

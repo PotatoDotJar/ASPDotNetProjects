@@ -6,7 +6,7 @@ SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
 GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/TABLE;6def4e
--- Adding 14 rows to dbo.cmsContentVersion
+-- Adding 15 rows to dbo.cmsContentVersion
 
 SET IDENTITY_INSERT [dbo].[cmsContentVersion] ON
 
@@ -40,6 +40,8 @@ INSERT INTO [dbo].[cmsContentVersion] ([id],[ContentId],[VersionId],[VersionDate
 INSERT INTO [dbo].[cmsContentVersion] ([id],[ContentId],[VersionId],[VersionDate]) VALUES (17,1063,'1638A112-EB7D-4B5D-ADDC-CC810B6F41E2',CONVERT(datetime,'2018-12-05 15:55:26.773',121));
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[cmsContentVersion] ([id],[ContentId],[VersionId],[VersionDate]) VALUES (18,1063,'433344AD-7C2F-4B5D-B4F9-2AB91B589B2B',CONVERT(datetime,'2018-12-05 15:59:50.403',121));
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsContentVersion] ([id],[ContentId],[VersionId],[VersionDate]) VALUES (19,1064,'293215FC-B1C8-44B5-84B4-06CE33AF6AB1',CONVERT(datetime,'2018-12-05 21:16:45.040',121));
 
 COMMIT TRANSACTION
 

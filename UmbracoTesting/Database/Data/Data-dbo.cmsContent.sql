@@ -6,7 +6,7 @@ SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
 GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/TABLE;6def4e
--- Adding 3 rows to dbo.cmsContent
+-- Adding 4 rows to dbo.cmsContent
 
 SET IDENTITY_INSERT [dbo].[cmsContent] ON
 
@@ -18,6 +18,8 @@ INSERT INTO [dbo].[cmsContent] ([pk],[nodeId],[contentType]) VALUES (1,1053,1052
 INSERT INTO [dbo].[cmsContent] ([pk],[nodeId],[contentType]) VALUES (3,1061,1052);
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[cmsContent] ([pk],[nodeId],[contentType]) VALUES (4,1063,1055);
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsContent] ([pk],[nodeId],[contentType]) VALUES (5,1064,1055);
 
 COMMIT TRANSACTION
 

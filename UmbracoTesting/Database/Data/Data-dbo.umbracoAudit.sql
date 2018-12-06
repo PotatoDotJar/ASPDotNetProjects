@@ -6,7 +6,7 @@ SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
 GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/TABLE;6def4e
--- Adding 13 rows to dbo.umbracoAudit
+-- Adding 17 rows to dbo.umbracoAudit
 
 SET IDENTITY_INSERT [dbo].[umbracoAudit] ON
 
@@ -38,6 +38,14 @@ INSERT INTO [dbo].[umbracoAudit] ([id],[performingUserId],[performingDetails],[p
 INSERT INTO [dbo].[umbracoAudit] ([id],[performingUserId],[performingDetails],[performingIp],[eventDateUtc],[affectedUserId],[affectedDetails],[eventType],[eventDetails]) VALUES (12,0,N'User "SYSTEM" ',N'::1',CONVERT(datetime,'2018-12-05 20:32:47.897',121),0,N'User "Richard Nader" <richard.nader@fynydd.com>',N'umbraco/user/save',N'updating LastLoginDate, UpdateDate');
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[umbracoAudit] ([id],[performingUserId],[performingDetails],[performingIp],[eventDateUtc],[affectedUserId],[affectedDetails],[eventType],[eventDetails]) VALUES (13,0,N'User "SYSTEM" ',N'::1',CONVERT(datetime,'2018-12-05 20:32:47.943',121),0,N'User "Richard Nader" <richard.nader@fynydd.com>',N'umbraco/user/sign-in/login',N'login success');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoAudit] ([id],[performingUserId],[performingDetails],[performingIp],[eventDateUtc],[affectedUserId],[affectedDetails],[eventType],[eventDetails]) VALUES (14,0,N'User "SYSTEM" ',N'::1',CONVERT(datetime,'2018-12-06 02:10:39.967',121),0,N'User "Richard Nader" <richard.nader@fynydd.com>',N'umbraco/user/save',N'updating LastLoginDate, UpdateDate');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoAudit] ([id],[performingUserId],[performingDetails],[performingIp],[eventDateUtc],[affectedUserId],[affectedDetails],[eventType],[eventDetails]) VALUES (15,0,N'User "SYSTEM" ',N'::1',CONVERT(datetime,'2018-12-06 02:10:40.007',121),0,N'User "Richard Nader" <richard.nader@fynydd.com>',N'umbraco/user/sign-in/login',N'login success');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoAudit] ([id],[performingUserId],[performingDetails],[performingIp],[eventDateUtc],[affectedUserId],[affectedDetails],[eventType],[eventDetails]) VALUES (16,0,N'User "SYSTEM" ',N'::1',CONVERT(datetime,'2018-12-06 02:21:39.007',121),0,N'User "Richard Nader" <richard.nader@fynydd.com>',N'umbraco/user/save',N'updating LastLoginDate, UpdateDate');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoAudit] ([id],[performingUserId],[performingDetails],[performingIp],[eventDateUtc],[affectedUserId],[affectedDetails],[eventType],[eventDetails]) VALUES (17,0,N'User "SYSTEM" ',N'::1',CONVERT(datetime,'2018-12-06 02:21:39.037',121),0,N'User "Richard Nader" <richard.nader@fynydd.com>',N'umbraco/user/sign-in/login',N'login success');
 
 COMMIT TRANSACTION
 

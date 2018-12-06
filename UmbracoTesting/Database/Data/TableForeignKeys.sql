@@ -9,6 +9,26 @@ PRINT N'CREATE foreign key constraints'
 GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/OBJ;6def4e
+ALTER TABLE [dbo].[cmsTagRelationship] WITH NOCHECK ADD CONSTRAINT [FK_cmsTagRelationship_cmsPropertyType] FOREIGN KEY([propertyTypeId]) 
+REFERENCES [dbo].[cmsPropertyType] ([id]) 
+GO -- SQRIBE/GO;6def4e
+
+-- SQRIBE/OBJ;6def4e
+ALTER TABLE [dbo].[umbracoNode] WITH NOCHECK ADD CONSTRAINT [FK_umbracoNode_umbracoNode_id] FOREIGN KEY([parentID]) 
+REFERENCES [dbo].[umbracoNode] ([id]) 
+GO -- SQRIBE/GO;6def4e
+
+-- SQRIBE/OBJ;6def4e
+ALTER TABLE [dbo].[cmsTask] WITH NOCHECK ADD CONSTRAINT [FK_cmsTask_cmsTaskType_id] FOREIGN KEY([taskTypeId]) 
+REFERENCES [dbo].[cmsTaskType] ([id]) 
+GO -- SQRIBE/GO;6def4e
+
+-- SQRIBE/OBJ;6def4e
+ALTER TABLE [dbo].[cmsTask] WITH NOCHECK ADD CONSTRAINT [FK_cmsTask_umbracoNode_id] FOREIGN KEY([nodeId]) 
+REFERENCES [dbo].[umbracoNode] ([id]) 
+GO -- SQRIBE/GO;6def4e
+
+-- SQRIBE/OBJ;6def4e
 ALTER TABLE [dbo].[cmsTask] WITH NOCHECK ADD CONSTRAINT [FK_cmsTask_umbracoUser] FOREIGN KEY([parentUserId]) 
 REFERENCES [dbo].[umbracoUser] ([id]) 
 GO -- SQRIBE/GO;6def4e
@@ -326,24 +346,4 @@ GO -- SQRIBE/GO;6def4e
 -- SQRIBE/OBJ;6def4e
 ALTER TABLE [dbo].[cmsTagRelationship] WITH NOCHECK ADD CONSTRAINT [FK_cmsTagRelationship_cmsTags_id] FOREIGN KEY([tagId]) 
 REFERENCES [dbo].[cmsTags] ([id]) 
-GO -- SQRIBE/GO;6def4e
-
--- SQRIBE/OBJ;6def4e
-ALTER TABLE [dbo].[cmsTagRelationship] WITH NOCHECK ADD CONSTRAINT [FK_cmsTagRelationship_cmsPropertyType] FOREIGN KEY([propertyTypeId]) 
-REFERENCES [dbo].[cmsPropertyType] ([id]) 
-GO -- SQRIBE/GO;6def4e
-
--- SQRIBE/OBJ;6def4e
-ALTER TABLE [dbo].[umbracoNode] WITH NOCHECK ADD CONSTRAINT [FK_umbracoNode_umbracoNode_id] FOREIGN KEY([parentID]) 
-REFERENCES [dbo].[umbracoNode] ([id]) 
-GO -- SQRIBE/GO;6def4e
-
--- SQRIBE/OBJ;6def4e
-ALTER TABLE [dbo].[cmsTask] WITH NOCHECK ADD CONSTRAINT [FK_cmsTask_cmsTaskType_id] FOREIGN KEY([taskTypeId]) 
-REFERENCES [dbo].[cmsTaskType] ([id]) 
-GO -- SQRIBE/GO;6def4e
-
--- SQRIBE/OBJ;6def4e
-ALTER TABLE [dbo].[cmsTask] WITH NOCHECK ADD CONSTRAINT [FK_cmsTask_umbracoNode_id] FOREIGN KEY([nodeId]) 
-REFERENCES [dbo].[umbracoNode] ([id]) 
 GO -- SQRIBE/GO;6def4e

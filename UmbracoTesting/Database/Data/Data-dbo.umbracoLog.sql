@@ -6,7 +6,7 @@ SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
 GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/TABLE;6def4e
--- Adding 93 rows to dbo.umbracoLog
+-- Adding 96 rows to dbo.umbracoLog
 
 SET IDENTITY_INSERT [dbo].[umbracoLog] ON
 
@@ -198,6 +198,12 @@ INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[
 INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (92,0,1054,CONVERT(datetime,'2018-12-05 16:00:33.183',121),N'Save',N'Save Template performed by user');
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (93,0,1054,CONVERT(datetime,'2018-12-05 16:00:47.347',121),N'Save',N'Save Template performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (94,0,0,CONVERT(datetime,'2018-12-05 21:16:18.493',121),N'Publish',N'Save and Publish performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (95,0,1064,CONVERT(datetime,'2018-12-05 21:16:45.057',121),N'Publish',N'Save and Publish performed by user');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[umbracoLog] ([id],[userId],[NodeId],[Datestamp],[logHeader],[logComment]) VALUES (96,0,1052,CONVERT(datetime,'2018-12-05 21:22:04.777',121),N'Save',N'Save ContentType performed by user');
 
 COMMIT TRANSACTION
 

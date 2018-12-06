@@ -6,10 +6,12 @@ SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
 GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/TABLE;6def4e
--- Adding 14 rows to dbo.cmsDocument
+-- Adding 15 rows to dbo.cmsDocument
 
 BEGIN TRANSACTION
 
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsDocument] ([nodeId],[published],[documentUser],[versionId],[text],[releaseDate],[expireDate],[updateDate],[templateId],[newest]) VALUES (1064,1,0,'293215FC-B1C8-44B5-84B4-06CE33AF6AB1',N'Contact Us',CONVERT(datetime,NULL,121),CONVERT(datetime,NULL,121),CONVERT(datetime,'2018-12-05 21:16:45.040',121),1054,1);
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[cmsDocument] ([nodeId],[published],[documentUser],[versionId],[text],[releaseDate],[expireDate],[updateDate],[templateId],[newest]) VALUES (1053,0,0,'BB5C825D-67DC-4936-BADB-14232EAD37F4',N'Home',CONVERT(datetime,NULL,121),CONVERT(datetime,NULL,121),CONVERT(datetime,'2018-12-05 13:32:17.940',121),1051,0);
 -- SQRIBE/INSERT;6def4e

@@ -6,7 +6,7 @@ SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
 GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/TABLE;6def4e
--- Adding 25 rows to dbo.cmsPropertyType
+-- Adding 26 rows to dbo.cmsPropertyType
 
 SET IDENTITY_INSERT [dbo].[cmsPropertyType] ON
 
@@ -62,6 +62,8 @@ INSERT INTO [dbo].[cmsPropertyType] ([id],[dataTypeId],[contentTypeId],[property
 INSERT INTO [dbo].[cmsPropertyType] ([id],[dataTypeId],[contentTypeId],[propertyTypeGroupId],[Alias],[Name],[sortOrder],[mandatory],[validationRegExp],[Description],[UniqueID]) VALUES (45,-88,1059,15,N'metaKeywords',N'Meta Keywords',2,0,NULL,N'Input as comma separated values.','B82B6A3F-31E6-43E5-B4DC-5B784FB65422');
 -- SQRIBE/INSERT;6def4e
 INSERT INTO [dbo].[cmsPropertyType] ([id],[dataTypeId],[contentTypeId],[propertyTypeGroupId],[Alias],[Name],[sortOrder],[mandatory],[validationRegExp],[Description],[UniqueID]) VALUES (46,-88,1059,15,N'metaRobots',N'Meta Robots',3,0,NULL,N'Input as comma separated values.','9A594926-77B2-4CD5-91ED-1D26FF1AAE95');
+-- SQRIBE/INSERT;6def4e
+INSERT INTO [dbo].[cmsPropertyType] ([id],[dataTypeId],[contentTypeId],[propertyTypeGroupId],[Alias],[Name],[sortOrder],[mandatory],[validationRegExp],[Description],[UniqueID]) VALUES (47,-49,1052,12,N'anotherTest',N'Another Test',2,0,NULL,NULL,'8B46E77A-6CCF-4BB6-BE39-8A399C0E5515');
 
 COMMIT TRANSACTION
 

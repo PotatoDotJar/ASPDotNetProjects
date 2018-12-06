@@ -146,10 +146,6 @@ ALTER TABLE [dbo].[cmsMemberType] ADD CONSTRAINT [df_cmsMemberType_isSensitive] 
 GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/OBJ;6def4e
-ALTER TABLE [dbo].[umbracoAudit] ADD CONSTRAINT [df_umbracoAudit_eventDateUtc] DEFAULT (getdate()) FOR [eventDateUtc]
-GO -- SQRIBE/GO;6def4e
-
--- SQRIBE/OBJ;6def4e
 ALTER TABLE [dbo].[cmsContentVersion] ADD CONSTRAINT [df_cmsContentVersion_VersionDate] DEFAULT (getdate()) FOR [VersionDate]
 GO -- SQRIBE/GO;6def4e
 
@@ -159,6 +155,10 @@ GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/OBJ;6def4e
 ALTER TABLE [dbo].[cmsDocument] ADD CONSTRAINT [df_cmsDocument_newest] DEFAULT ('0') FOR [newest]
+GO -- SQRIBE/GO;6def4e
+
+-- SQRIBE/OBJ;6def4e
+ALTER TABLE [dbo].[umbracoAudit] ADD CONSTRAINT [df_umbracoAudit_eventDateUtc] DEFAULT (getdate()) FOR [eventDateUtc]
 GO -- SQRIBE/GO;6def4e
 
 -- SQRIBE/OBJ;6def4e
